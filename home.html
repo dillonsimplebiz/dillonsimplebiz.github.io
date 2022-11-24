@@ -55,6 +55,7 @@ hr {
   <input id = 't89a'>
   <button id = 't89b'>Button</button>
   <p id = 't89p'></p>
+  <p id = 't89p1'></p>
                     
   <h3>
     How it works
@@ -204,7 +205,7 @@ input.onchange = e => {
   
 document.getElementById('t89b').onclick = function(){
 var secr = document.getElementById('t89a').value
-document.getElementById('t89p').innerHTML = a
+document.getElementById('t89p').innerHTML = secr
   
 var auth = { "Authorization" : `Basic `+secr };
 fetch("https://api.duda.co/api/sites/multiscreen/a2b9a706", { headers : auth });
@@ -212,6 +213,9 @@ fetch("https://api.duda.co/api/sites/multiscreen/a2b9a706", { headers : auth });
 };
    .then((result) => {
     return result.text();
+  })
+   .then((response) => {
+    document.getElementById("t89p1").innerHTML = response;
   })
 
 </script>

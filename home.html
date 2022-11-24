@@ -1,0 +1,148 @@
+<div id='main'></div>
+<div>
+  <h3>
+    How it works
+  </h3>
+  <p>
+According to everyone I have ever talked to, in our company and in Duda and Ecwid support, it is not currently possible to "export" product options. I found a way to. I've tried to simplify it down as much as I could. Duda has an option when importing a file, to import it as an XCart file, this format allows you to import product options into Duda.
+  </p>
+  <h3>Instructions for Exporting Product Options</h3>
+  <p>If you want to export a site into a XCart format, message me (Dillon@simple.biz) with the Duda site name, and I'll send you a google sheet with the formatting already done, so the sheet can be edited/adjusted as nessesary.</p>
+  <h3>Instructions for Importing Product Options</h3>
+  <p>
+  If you want to import product options from a spreadsheet you have already created, thats what this tool would be used for.</p>
+  <p>
+  On the google sheets, go to "File" then "Download" then "Tab Separated Values (.tsv)". Using a csv gets a little tricky as commas can appear in the descriptions of products. </p>
+  <p>
+  After you get the .TSV file, upload the file to this site using the "Choose File" button at the top of this page. Once that loads and formats, a download button should appear. Take the downloaded file and head over to Duda.</p>
+  <p>
+  On Duda where you would normally import a CSV file, instead on clicking the CSV tab, click on XCart. Upload the file you downloaded on this page, and use the Delimiter "TAB". Character Encoding for me was "ISO-8859-1" and I haven't had any issues yet. Category Path Separator should be "/". If there are any issues uploading the file, double check with the example below, if there are still errors, you can message me about it (dillon@simple.biz)</p>
+  <h3>
+    Current Functionalities and Limitations
+  </h3>
+  <p>
+    XCart files have 3 different sections. Categories, Products, and Product Options.
+    </p>
+    <h4>
+    Category
+    </h4>
+    <p>
+    Currently only handles the category name, whether the category is enabled/disabled, and the order that the categories appear.
+    </p>
+    <p>
+    The category name can include folders by separating the Main folder and Subfolder by a " / ". Examples below
+    </p>
+    <h4>
+    Products
+    </h4>
+    <p>
+    I ran into an issue with the products that have unlimited inventory vs those that have a stock quantity. To fix this, I've separated the products on the XCart file into two different sets, those with stock and those with unlimited stock.
+    </p>
+    <p>
+    Products only handles the SKU, Name, Weight, Description, Quantity, Enabled/disabled, Price, any and all categories, only one image
+    </p>
+    <h4>
+    Product options
+    </h4>
+    <p>
+    Product Options only handles the SKU of the product the product option should be assigned to, the name of the option, @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    </p>
+  <h3>
+  Example
+  </h3>
+</div>
+<script>
+  var input = document.createElement('input');
+input.type = 'file';
+main = document.getElementById('main')
+main.appendChild(input)
+main.appendChild(document.createElement('br'))
+main.appendChild(document.createElement('br'))
+input.onchange = e => {
+  var file = e.target.files[0]
+  var reader = new FileReader()
+  reader.readAsText(file, 'UTF-8')
+  reader.onload = readerEvent => {
+    var content = readerEvent.target.result
+    var lines = content.split('\r')
+    newlines = []
+    removals = 0
+    for (var i = 0; i < lines.length; i++) {
+
+      if (lines[i].match(/\[CATEGORIES\]/g)) {
+        check = /	+?$/g.exec(lines[i])
+        if (check == null) {
+          removals = 0
+        } else {
+          removals = check[0].length
+        }
+      }
+      if (lines[i].match(/\!CATEGORY/g)) {
+        check = /	+?$/g.exec(lines[i])
+        if (check == null) {
+          removals = 0
+        } else {
+          removals = check[0].length
+        }
+      }
+      if (lines[i].match(/\[PRODUCTS\]/g)) {
+        times = 0
+        check = /	+?$/g.exec(lines[i])
+        if (check == null) {
+          removals = 0
+        } else {
+          removals = check[0].length
+        }
+      }
+      if (lines[i].match(/\!FORSALE/g)) {
+        check = /	+?$/g.exec(lines[i])
+        if (check == null) { 
+        	removals = 0
+        } else {
+          removals = check[0].length
+       
+        }
+      }
+      if (lines[i].match(/\[PRODUCT_OPTIONS\]/g)) {
+        times = 1
+        check = /	+?$/g.exec(lines[i])
+        if (check == null) {
+          removals = 0
+        } else {
+          removals = check[0].length
+        }
+      }
+      if (lines[i].match(/\!CLASS/g)) {
+        if (times == 1) {
+          check = /	+?$/g.exec(lines[i])
+          if (check == null) {
+            removals = 0
+          } else {
+            removals = check[0].length
+          }
+        }
+      }
+      if (removals == 0) {
+        newlines.push(lines[i])
+      } else {
+        newlines.push(lines[i].slice(0, removals * -1))
+      }
+    }
+    var a = window.document.createElement('a');
+    a.href = window.URL.createObjectURL(new Blob([newlines.join('')], {
+      type: 'text/csv'
+    }));
+    a.download = 'test.csv';
+    /* a.innerText = 'click' */
+    var button_ = document.createElement('button')
+    button_.type = 'button'
+    button_.innerText = 'Download Corrected X-Cart'
+    a.appendChild(button_)
+    main.appendChild(a)
+
+
+
+  }
+}
+
+</script>

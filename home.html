@@ -55,7 +55,7 @@ hr {
   <input id = 't89a'>
   <button id = 't89b'>Button</button>
   <p id = 't89p'></p>
-  <p id = 't89p1'>5</p>
+  <p id = 't89p1'>6</p>
                     
   <h3>
     How it works
@@ -212,7 +212,8 @@ cred = document.getElementById('t89a').value
   // (B) FETCH WITH HTTP AUTH
   fetch (url, {
     headers: {
-      "Authorization": `Basic `+cred
+      "Authorization": `Basic `+cred,
+      'Access-Control-Allow-Origin': `*`
     }
   })
  

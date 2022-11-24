@@ -55,7 +55,7 @@ hr {
   <input id = 't89a'>
   <button id = 't89b'>Button</button>
   <p id = 't89p'></p>
-  <p id = 't89p1'></p>
+  <p id = 't89p1'>5</p>
                     
   <h3>
     How it works
@@ -202,21 +202,32 @@ input.onchange = e => {
   }
 }
 
-  
-document.getElementById('t89b').onclick = function(){
-var secr = document.getElementById('t89a').value
-document.getElementById('t89p').innerHTML = secr
-  
-var auth = { "Authorization" : `Basic `+secr };
-fetch("https://api.duda.co/api/sites/multiscreen/a2b9a706", { headers : auth });
+  document.getElementById('t89b').onclick = function() {fetchAuth()}
 
-};
-   .then((result) => {
+function fetchAuth () {
+cred = document.getElementById('t89a').value
+  // (A) URL & CREDENTIALS
+  var url = "https://api.duda.co/api/sites/multiscreen/a2b9a706",
+      credentials = cred 
+  // (B) FETCH WITH HTTP AUTH
+  fetch (url, {
+    headers: {
+      "Authorization": `Basic `+cred
+    }
+  })
+ 
+  // (C) SERVER RESPONSE
+  .then((result) => {
+    if (result.status != 200) { throw new Error("Bad Server Response"); }
     return result.text();
   })
-   .then((response) => {
+  .then((response) => {
     document.getElementById("t89p1").innerHTML = response;
   })
+ 
+  // (D) HANDLE ERRORS (OPTIONAL)
+  .catch((error) => { console.log(error); });
+}
 
 </script>
   

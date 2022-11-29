@@ -224,7 +224,16 @@ cred = document.getElementById('t89a').value
   .catch((error) => { console.log(error); });
 }
   
-  
+ const { Duda } = require('@dudadev/partner-api');
+
+const duda = new Duda({
+  user: process.env.DUDA_API_USER,
+  pass: process.env.DUDA_API_PASS,
+});
+
+duda.sites.get({ site_name: "a2b9a706" })
+  .then((site) => console.log(site))
+  .catch((error) => console.error(error)); 
   
   document.getElementById('t90b').onclick = function() {fetchAuth()}
 

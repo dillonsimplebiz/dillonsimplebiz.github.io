@@ -60,7 +60,7 @@ hr {
   <input id = 't90a'>
   <button id = 't90b'>Button</button>
   <p id = 't90p'></p>
-  <p id = 't90p1'>11</p>
+  <p id = 't90p1'>12</p>
                     
   <h3>
     How it works
@@ -207,9 +207,9 @@ input.onchange = e => {
   }
 }
 
-  document.getElementById('t89b').onclick = function() {fetchAuth()}
+  document.getElementById('t89b').onclick = function() {fetchAuth1()}
 
-function fetchAuth () {
+function fetchAuth1 () {
 cred = document.getElementById('t89a').value
   ecwiduserID = "71178110"
   var url = "https://app.ecwid.com/api/v3/"+ecwiduserID+"/categories?offset=0&hidden_categories=true&token="+cred

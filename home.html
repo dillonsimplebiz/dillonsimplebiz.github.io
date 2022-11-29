@@ -210,12 +210,14 @@ cred = document.getElementById('t89a').value
   var url = "https://api.duda.co/api/sites/multiscreen/a2b9a706",
       credentials = cred 
   // (B) FETCH WITH HTTP AUTH
-  fetch (url, {
-    headers: {
-      "Authorization": `Basic `+cred,
-      'Access-Control-Allow-Origin': `*`,
-      'Access-Control-Allow-Methods': `GET`
-    }
+  var url = "https://app.ecwid.com/api/v3/71178110/categories?offset=0&hidden_categories=true&token="+cred
+  fetch (url, 
+//          {
+//     headers: {
+//       "Authorization": `Basic `+cred,
+//       'Access-Control-Allow-Origin': `*`,
+//       'Access-Control-Allow-Methods': `GET`
+//     }
   })
  
   // (C) SERVER RESPONSE

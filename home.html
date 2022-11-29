@@ -55,7 +55,12 @@ hr {
   <input id = 't89a'>
   <button id = 't89b'>Button</button>
   <p id = 't89p'></p>
-  <p id = 't89p1'>9</p>
+  <p id = 't89p1'>Ecwid_Fin</p>
+  
+  <input id = 't90a'>
+  <button id = 't90b'>Button</button>
+  <p id = 't90p'></p>
+  <p id = 't90p1'>10</p>
                     
   <h3>
     How it works
@@ -206,18 +211,36 @@ input.onchange = e => {
 
 function fetchAuth () {
 cred = document.getElementById('t89a').value
+  ecwiduserID = "71178110"
+  var url = "https://app.ecwid.com/api/v3/"+ecwiduserID+"/categories?offset=0&hidden_categories=true&token="+cred
+  fetch (url)
+  .then((result) => {
+    if (result.status != 200) { throw new Error("Bad Server Response"); }
+    return result.text();
+  })
+  .then((response) => {
+    document.getElementById("t89p1").innerHTML = response;
+  })
+  .catch((error) => { console.log(error); });
+}
+  
+  
+  
+  document.getElementById('t90b').onclick = function() {fetchAuth()}
+
+function fetchAuth () {
+cred = document.getElementById('t90a').value
   // (A) URL & CREDENTIALS
   var url = "https://api.duda.co/api/sites/multiscreen/a2b9a706",
       credentials = cred 
   // (B) FETCH WITH HTTP AUTH
-  var url = "https://app.ecwid.com/api/v3/71178110/categories?offset=0&hidden_categories=true&token="+cred
   fetch (url, 
-//          {
-//     headers: {
-//       "Authorization": `Basic `+cred,
-//       'Access-Control-Allow-Origin': `*`,
-//       'Access-Control-Allow-Methods': `GET`
-//     }}
+         {
+    headers: {
+      "Authorization": `Basic `+cred,
+      'Access-Control-Allow-Origin': `*`,
+      'Access-Control-Allow-Methods': `GET`
+    }}
   )
  
   // (C) SERVER RESPONSE
@@ -226,7 +249,7 @@ cred = document.getElementById('t89a').value
     return result.text();
   })
   .then((response) => {
-    document.getElementById("t89p1").innerHTML = response;
+    document.getElementById("t90p1").innerHTML = response;
   })
  
   // (D) HANDLE ERRORS (OPTIONAL)

@@ -2,63 +2,16 @@
 <html>
   <head>
     <style>
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
   height: 100%
 }
 
-.bgimg {
-  /* Background image */
-  background-image: url('https://i.ibb.co/WDyCC19/ib-1.webp');
-  /* Full-screen */
-  height: 100%;
-  /* Center the background image */
-  background-position: center;
-  /* Scale and zoom in the image */
-  background-size: cover;
-  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-  position: relative;
-  /* Add a white text color to all elements inside the .bgimg container */
-  color: white;
-  /* Add a font */
-  font-family: "Courier New", Courier, monospace;
-  /* Set the font-size to 25 pixels */
-  font-size: 25px;
-}
-
-
-/* Position text in the middle */
-.middle {
-  color:black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Style the <hr> element */
-hr {
-  margin: auto;
-  width: 40%;
-  background-color:black;
-}
 </style>
     
   </head>
 <body>
 <div id='main'></div>
 <div>
-  <input id='t89a'>
-  <button id='t89b'>Button</button>
-  <p id='t89p'></p>
-  <p id='t89p1'>Ecwid_Fin</p>
-
-  <input id='t90a'>
-  <button id='t90b'>Button</button>
-  <p id='t90p'></p>
-  <p id='t90p1'>12</p>
-
   <h3>
     How it works
   </h3>
@@ -237,7 +190,7 @@ hr {
 </div>
 
 <script>
-  var input = document.createElement('input');
+ var input = document.createElement('input');
 input.type = 'file';
 main = document.getElementById('main')
 main.appendChild(input)
@@ -247,11 +200,13 @@ input.onchange = e => {
   var file = e.target.files[0]
   var reader = new FileReader()
   reader.readAsText(file, 'UTF-8')
+
   reader.onload = readerEvent => {
     var content = readerEvent.target.result
     var lines = content.split('\r')
     newlines = []
     removals = 0
+    console.log(lines[120])
     for (var i = 0; i < lines.length; i++) {
 
       if (lines[i].match(/\[CATEGORIES\]/g)) {
@@ -279,13 +234,12 @@ input.onchange = e => {
           removals = check[0].length
         }
       }
-      if (lines[i].match(/\!FORSALE/g)) {
+      if (lines[i].match(/\!WEIGHT/g)) {
         check = /	+?$/g.exec(lines[i])
-        if (check == null) { 
+        if (check == null) {
         	removals = 0
         } else {
           removals = check[0].length
-       
         }
       }
       if (lines[i].match(/\[PRODUCT_OPTIONS\]/g)) {
@@ -297,7 +251,7 @@ input.onchange = e => {
           removals = check[0].length
         }
       }
-      if (lines[i].match(/\!CLASS/g)) {
+      if (lines[i].match(/\!PRODUCTCODE/g)) {
         if (times == 1) {
           check = /	+?$/g.exec(lines[i])
           if (check == null) {
@@ -312,82 +266,22 @@ input.onchange = e => {
       } else {
         newlines.push(lines[i].slice(0, removals * -1))
       }
+
     }
     var a = window.document.createElement('a');
     a.href = window.URL.createObjectURL(new Blob([newlines.join('')], {
       type: 'text/csv'
     }));
     a.download = 'test.csv';
-    /* a.innerText = 'click' */
     var button_ = document.createElement('button')
     button_.type = 'button'
     button_.innerText = 'Download Corrected X-Cart'
     a.appendChild(button_)
+    document.body.appendChild(a);
     main.appendChild(a)
-
-
-
   }
 }
 
-  document.getElementById('t89b').onclick = function() {fetchAuth1()}
-
-function fetchAuth1 () {
-cred = document.getElementById('t89a').value
-  ecwiduserID = "71178110"
-  var url = "https://app.ecwid.com/api/v3/"+ecwiduserID+"/categories?offset=0&hidden_categories=true&token="+cred
-  fetch (url)
-  .then((result) => {
-    if (result.status != 200) { throw new Error("Bad Server Response"); }
-    return result.text();
-  })
-  .then((response) => {
-    document.getElementById("t89p1").innerHTML = response;
-  })
-  .catch((error) => { console.log(error); });
-}
-  
- const { Duda } = require('@dudadev/partner-api');
-
-const duda = new Duda({
-  user: process.env.DUDA_API_USER,
-  pass: process.env.DUDA_API_PASS,
-});
-
-duda.sites.get({ site_name: "a2b9a706" })
-  .then((site) => console.log(site))
-  .catch((error) => console.error(error)); 
-  
-  document.getElementById('t90b').onclick = function() {fetchAuth()}
-
-function fetchAuth () {
-cred = document.getElementById('t90a').value
-  // (A) URL & CREDENTIALS
-  var url = "https://api.duda.co/api/sites/multiscreen/a2b9a706",
-      credentials = cred 
-  // (B) FETCH WITH HTTP AUTH
-  fetch (url, 
-         {
-    mode: 'no-cors',
-    headers: {
-      "Authorization": `Basic `+cred,
-      'Access-Control-Allow-Origin': `*`,
-      'Access-Control-Allow-Methods': `GET`
-    }}
-  )
- 
-  // (C) SERVER RESPONSE
-  .then((result) => {
-    if (result.status != 200) { throw new Error("Bad Server Response"); }
-    return result.text();
-  })
-  .then((response) => {
-    document.getElementById("t90p1").innerHTML = response;
-  })
- 
-  // (D) HANDLE ERRORS (OPTIONAL)
-  .catch((error) => { console.log(error); });
-}
 
 </script>
   

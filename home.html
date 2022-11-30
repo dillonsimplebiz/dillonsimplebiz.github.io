@@ -47,183 +47,195 @@ hr {
     
   </head>
 <body>
-
- <div id='main'></div>
+<div id='main'></div>
 <div>
-  <input id = 't89a'>
-  <button id = 't89b'>Button</button>
-  <p id = 't89p'></p>
-  <p id = 't89p1'>Ecwid_Fin</p>
-  
-  <input id = 't90a'>
-  <button id = 't90b'>Button</button>
-  <p id = 't90p'></p>
-  <p id = 't90p1'>12</p>
-                    
+  <input id='t89a'>
+  <button id='t89b'>Button</button>
+  <p id='t89p'></p>
+  <p id='t89p1'>Ecwid_Fin</p>
+
+  <input id='t90a'>
+  <button id='t90b'>Button</button>
+  <p id='t90p'></p>
+  <p id='t90p1'>12</p>
+
   <h3>
     How it works
   </h3>
   <p>
-According to everyone I have ever talked to, in our company and in Duda and Ecwid support, it is not currently possible to "export" product options. I found a way to. I've tried to simplify it down as much as I could. Duda has an option when importing a file, to import it as an XCart file, this format allows you to import product options into Duda.
+    According to everyone I have ever talked to, in our company and in Duda and Ecwid support, it is not currently possible to "export" product options. I found a way to. I've tried to simplify it down as much as I could. Duda has an option when importing a file, to import it as an XCart file, this format allows you to import product options into Duda.
   </p>
   <h3>Instructions for Exporting Product Options</h3>
   <p>If you want to export a site into a XCart format, message me (Dillon@simple.biz) with the Duda site name, and I'll send you a google sheet with the formatting already done, so the sheet can be edited/adjusted as nessesary.</p>
   <h3>Instructions for Importing Product Options</h3>
   <p>
-  If you want to import product options from a spreadsheet you have already created, thats what this tool would be used for.</p>
+    If you want to import product options from a spreadsheet you have already created, thats what this tool would be used for.</p>
   <p>
-  On the google sheets, go to "File" then "Download" then "Tab Separated Values (.tsv)". Using a csv gets a little tricky as commas can appear in the descriptions of products. Which is why a tsv is used here. </p>
+    On the google sheets, go to "File" then "Download" then "Tab Separated Values (.tsv)". Using a csv gets a little tricky as commas can appear in the descriptions of products. Which is why a tsv is used here. </p>
   <p>
-  After you get the .TSV file, upload the file to this site using the "Choose File" button at the top of this page. Once that loads and formats, a download button should appear. Take the downloaded file and head over to Duda.</p>
+    After you get the .TSV file, upload the file to this site using the "Choose File" button at the top of this page. Once that loads and formats, a download button should appear. Take the downloaded file and head over to Duda.</p>
   <p>
-  On Duda where you would normally import a CSV file, instead on clicking the CSV tab, click on XCart. Upload the file you downloaded on this page, and use the Delimiter "TAB". Character Encoding for me was "ISO-8859-1" and I haven't had any issues yet. Category Path Separator should be "/". If there are any issues uploading the file, double check with the example below, if there are still errors, you can message me about it (dillon@simple.biz)</p>
+    On Duda where you would normally import a CSV file, instead on clicking the CSV tab, click on XCart. Upload the file you downloaded on this page, and use the Delimiter "TAB". Character Encoding for me was "ISO-8859-1" and I haven't had any issues yet. Category Path Separator should be "/". If there are any issues uploading the file, double check with the example below, if there are still errors, you can message me about it (dillon@simple.biz)</p>
   <h3>
     Current Functionalities and Limitations
   </h3>
   <p>
     XCart files have 3 different sections. Categories, Products, and Product Options.
-    </p>
-    <h4>
-    Category
-    </h4>
-    <p>
-    Currently only handles the category name, whether the category is enabled/disabled, and the order that the categories appear.
-    </p>
-    <p>
-    The category name can include folders by separating the Main folder and Subfolder by a " / ". Examples below
-    </p>
-    <h4>
-    Products
-    </h4>
-    <p>
-    I ran into an issue with the products that have unlimited inventory vs those that have a stock quantity. To fix this, I've separated the products on the XCart file into two different sets, those with stock and those with unlimited stock.
-    </p>
-    <p>
-    Products only handles the SKU, Name, Weight, Description, Quantity, Enabled/disabled, Price, any and all categories, only one image
-    </p>
-    <h4>
-    Product options
-    </h4>
-    <p>
-    Product Options only handles the SKU of the product the product option should be assigned to, the name of the option, Dropdown List or Text Field, Price Modifier Value, Percentage modifier or absolute modifier
-    </p>
-  <h3>
-  Example
-  </h3>
-  <h4>
-  Categories
-  </h4>
-  <table>
-  <tr>
-    <td ><img src = 'https://i.ibb.co/RgKrR9R/category-sheets.png'></td>
-    <td><img src = 'https://i.ibb.co/C21KVhg/category-duda.png'></td>
-  </tr>
-  <td></td>
-  </table>
- <p>
-  The first 2 rows are required and can not be changed.</p><p>
-  The "!CATEGORY" column is where the names of the categories can be added in, using each line for a new cateogry. For categories with subcategories, you can use the ' / ' like in the example to create new categories and subcategories.</p><p>
-  The "!AVAIL" column is to show if a category should be enabled or disabled.</p><p>  
-  The "!ORDERBY" column is for letting Duda know what order the categories should be in, to simplify it down, you can alway put the cells of the sheet as the order, and then number the order 1, 2, 3, etc.
   </p>
   <h4>
-  Products
+    Category
   </h4>
-     <img src = 'https://i.ibb.co/MDtcYkt/image-2022-11-29-185752453.png'>
-    <p>
+  <p>
+    Currently only handles the category name, whether the category is enabled/disabled, and the order that the categories appear.
+  </p>
+  <p>
+    The category name can include folders by separating the Main folder and Subfolder by a " / ". Examples below
+  </p>
+  <h4>
+    Products
+  </h4>
+  <p>
+    I ran into an issue with the products that have unlimited inventory vs those that have a stock quantity. To fix this, I've separated the products on the XCart file into two different sets, those with stock and those with unlimited stock.
+  </p>
+  <p>
+    Products only handles the SKU, Name, Weight, Description, Quantity, Enabled/disabled, Price, any and all categories, only one image
+  </p>
+  <h4>
+    Product options
+  </h4>
+  <p>
+    Product Options only handles the SKU of the product the product option should be assigned to, the name of the option, Dropdown List or Text Field, Price Modifier Value, Percentage modifier or absolute modifier
+  </p>
+  <h3>
+    Example
+  </h3>
+  <h4>
+    Categories
+  </h4>
+  <table>
+    <tr>
+      <td><img src='https://i.ibb.co/RgKrR9R/category-sheets.png'></td>
+      <td><img src='https://i.ibb.co/C21KVhg/category-duda.png'></td>
+    </tr>
+    <td></td>
+  </table>
+  <p>
+    The first 2 rows are required and can not be changed.</p>
+  <p>
+    The "!CATEGORY" column is where the names of the categories can be added in, using each line for a new cateogry. For categories with subcategories, you can use the ' / ' like in the example to create new categories and subcategories.</p>
+  <p>
+    The "!AVAIL" column is to show if a category should be enabled or disabled.</p>
+  <p>
+    The "!ORDERBY" column is for letting Duda know what order the categories should be in, to simplify it down, you can alway put the cells of the sheet as the order, and then number the order 1, 2, 3, etc.
+  </p>
+  <h4>
+    Products
+  </h4>
+  <img src='https://i.ibb.co/MDtcYkt/image-2022-11-29-185752453.png'>
+  <p>
     The rows starting with "[PRODUCTS]" and "!PRODUCTCODE" are required and can not be changed.
-    </p>
-    <p>
+  </p>
+  <p>
     This is split into two different sections as the first one is for products with an inventory, and the second is for products with unlimited inventory.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!PRODUCTCODE" column is for the products SKU number, "!PRODUCT" is for the name, etc.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!AVAIL" column is for the in-stock quantity.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!FORSALE" column if whether the product is enabled or disabled. 1 being enabled, 0 being disabled.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!CATEGORY" column gets interesting as now to assign more than one category to a product, there needs to be a row underneath it completely blank, other than the !CATEGORY column. The format follows the same rules as the "[CATEGORIES]" example as above.
-    </p>
-    <img src = 'https://i.ibb.co/PFZ9yWZ/image-2022-11-30-151016198.png' width='100%'>
-    <p>
-    The image above shows the imported XCart file and the products it imported, 
-    </p>
-    <table>
+  </p>
+  <img src='https://i.ibb.co/PFZ9yWZ/image-2022-11-30-151016198.png' width='100%'>
+  <p>
+    The image above shows the imported XCart file and the products it imported,
+  </p>
+  <table>
     <tr>
       <th>
-      Red Shirt
+        Red Shirt
       </th>
       <th>
-      Blue Shirt
+        Blue Shirt
       </th>
       <th>
-      Gift Card
+        Gift Card
       </th>
     </tr>
     <tr>
-      <td><img src = 'https://i.ibb.co/pzW346X/image-2022-11-30-125304597.png'></td>
-      <td><img src = 'https://i.ibb.co/qRWkVj6/image-2022-11-30-151341510.png'></td>
-      <td><img src = 'https://i.ibb.co/Hrtzj7p/image-2022-11-30-151441085.png'></td>
+      <td><img src='https://i.ibb.co/pzW346X/image-2022-11-30-125304597.png'></td>
+      <td><img src='https://i.ibb.co/qRWkVj6/image-2022-11-30-151341510.png'></td>
+      <td><img src='https://i.ibb.co/Hrtzj7p/image-2022-11-30-151441085.png'></td>
     </tr>
-    </table>
-    <h4>
-  Product Options
+  </table>
+  <h4>
+    Product Options
   </h4>
-  <img src = 'https://i.ibb.co/VBynh0w/image-2022-11-30-154046565.png' width='50%'>
-      <table style = 'width:100%;max-width:100%;'>
-      <style>td{width:33%;}img{width:100%;}</style>
+  <img src='https://i.ibb.co/VBynh0w/image-2022-11-30-154046565.png' style='width:50%;'>
+  <table style='width:100%;max-width:100%;'>
+    <style>
+      td {
+        width: 33%;
+      }
+
+      img {
+        width: 100%;
+      }
+
+    </style>
     <tr>
       <th>
-      8675300 (Red Shirt)
+        8675300 (Red Shirt)
       </th>
       <th>
-      8675301 (Blue Shirt)
+        8675301 (Blue Shirt)
       </th>
       <th>
-      8675302 (Gift Card)
+        8675302 (Gift Card)
       </th>
     </tr>
     <tr>
-      <td><img src = 'https://i.ibb.co/ygpJsdD/image-2022-11-30-153905176.png'></td>
-      <td><img src = 'https://i.ibb.co/pv441mH/image-2022-11-30-153744464.png'></td>
-      <td><img src = 'https://i.ibb.co/8zDXRK1/image-2022-11-30-153957570.png'></td>
+      <td><img src='https://i.ibb.co/ygpJsdD/image-2022-11-30-153905176.png'></td>
+      <td><img src='https://i.ibb.co/pv441mH/image-2022-11-30-153744464.png'></td>
+      <td><img src='https://i.ibb.co/8zDXRK1/image-2022-11-30-153957570.png'></td>
     </tr>
-        <tr>
-      <td><img src = 'https://i.ibb.co/jbFJ9C7/image-2022-11-30-154342988.png'></td>
-      <td><img src = 'https://i.ibb.co/Wf2HQRZ/image-2022-11-30-154242385.png'></td>
-      <td><img src = 'https://i.ibb.co/hMgb5Sz/image-2022-11-30-154437222.png'></td>
+    <tr>
+      <td><img src='https://i.ibb.co/jbFJ9C7/image-2022-11-30-154342988.png'></td>
+      <td><img src='https://i.ibb.co/Wf2HQRZ/image-2022-11-30-154242385.png'></td>
+      <td><img src='https://i.ibb.co/hMgb5Sz/image-2022-11-30-154437222.png'></td>
     </tr>
-    </table>
-<p>
+  </table>
+  <p>
     The rows starting with "[PRODUCTOPTIONS]" and "!PRODUCTCODE" are required and can not be changed.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!PRODUCTCODE" column is for the products SKU number.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!CLASS" column is for the name of what the option is called.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!TYPE" column is whether the options would be a Dropdown list, or a Text Field
-    </p>
-    <p>
+  </p>
+  <p>
     The "!OPTION" column is a special column, like the !CATEGORY under [PRODUCTS] to add new options you would need to create a row underneath it and fill it out like in the examples below.
-    </p>
-    <p>
+  </p>
+  <p>
     The "!PRICE_MODIFIER" column is what would go in the normal price section of the options. (Can be positive or negative)
-    </p>
-    <p>
+  </p>
+  <p>
     The "!MODIFIER_TYPE" column is either going to be a "$" or "%" for how the modifier price affects the total price, whether its a percentage or absolute.
-    </p>
-    <p>
+  </p>
+  <p>
     If a product needs multiple product options, add that as a new SKU, and fill it out like normal.
-    </p>
-    
+  </p>
+
 </div>
+
 <script>
   var input = document.createElement('input');
 input.type = 'file';

@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
   searchBar = document.getElementById('searchbar')
   searchBar.focus()
   document.getElementById('lUpdated').innerHTML = 'Last Updated: '+datab[0].last_checked
-}
+})
 /* function f(a, b) {
   longString.indexOf(a, b)
 }

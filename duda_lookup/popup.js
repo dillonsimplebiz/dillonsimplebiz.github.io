@@ -75,7 +75,10 @@ document.getElementById('srtd1submit').addEventListener('click', search)
 
 
 document.getElementById('lUpdated').innerHTML = 'Last Updated: '+datab[0].last_checked
-
+document.addEventListener('DOMContentLoaded', function() {
+  searchBar = document.getElementById('searchbar')
+  searchBar.focus()
+}
 /* function f(a, b) {
   longString.indexOf(a, b)
 }

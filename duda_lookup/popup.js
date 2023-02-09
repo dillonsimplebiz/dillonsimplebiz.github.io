@@ -73,6 +73,9 @@ searchRow.appendChild(outsource) */
 document.getElementById('srtd0back').addEventListener('click', fback)
 document.getElementById('srtd1submit').addEventListener('click', search)
 
+
+document.getElementById('lUpdated').innerHTML = 'Last Updated: '+datab[0].last_checked
+
 /* function f(a, b) {
   longString.indexOf(a, b)
 }

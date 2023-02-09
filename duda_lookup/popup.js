@@ -60,7 +60,9 @@ datab = {
 
 main = document.getElementById('main')
 searchRow = document.getElementById('searchRow')
-document.getElementById('searchbar').addEventListener('keypress', function(e) {
+searchBar = document.getElementById('searchbar')
+searchBar.focus()
+searchBar.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
     document.getElementById('srtd1submit').click()
   }

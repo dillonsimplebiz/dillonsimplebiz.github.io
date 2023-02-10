@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   searchBar = document.getElementById('searchbar')
   searchBar.focus()
   document.getElementById('lUpdated').innerHTML = 'Last Updated: ' + datab[0].last_checked
+longString = longString.toLowerCase()
 })
 
 
@@ -133,7 +134,7 @@ function search() {
   document.getElementById('hiddent').innerHTML = 'search'
   page = 'Search'
   search_for = document.getElementById('searchbar').value
-  search_for = search_for.replace(/((https:\/\/?)|(http:\/\/)?)/,'').replace(/\/.*/,'')
+  search_for = search_for.replace(/((https:\/\/?)|(http:\/\/)?)/,'').replace(/\/.*/,'').replace(/ $/,'').toLowerCase()
   lastSearch = search_for
   main.innerHTML = ''
 

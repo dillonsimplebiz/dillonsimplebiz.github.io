@@ -143,7 +143,7 @@ function search() {
   start = 0
   arr = []
   count = 0
-  while (count < 20) {
+  while (count < 40) {
     count += 1
     foundat = longString.indexOf(search_for, start)
     if (foundat == -1) {

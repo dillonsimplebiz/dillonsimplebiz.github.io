@@ -16,7 +16,7 @@ document.getElementById('srtd1submit').addEventListener('click', search)
 document.addEventListener('DOMContentLoaded', function() {
   searchBar = document.getElementById('searchbar')
   searchBar.focus()
-  document.getElementById('lUpdated').innerHTML = 'Last Updated: '+datab[0].last_checked
+  document.getElementById('lUpdated').innerHTML = 'Last Updated: ' + datab[0].last_checked
 })
 
 
@@ -75,9 +75,9 @@ function showSite(databindex1) {
   domainwhen = document.createElement('p')
   domainwhen.innerHTML = 'Domain Last Changed : ' + datab[databindex].last_domain_changed
   main.appendChild(domainwhen)
-//   updatedon = document.createElement('p')
-//   updatedon.innerHTML = 'Info Last Updated : ' + datab[databindex].last_checked
-//   main.appendChild(updatedon)
+  //   updatedon = document.createElement('p')
+  //   updatedon.innerHTML = 'Info Last Updated : ' + datab[databindex].last_checked
+  //   main.appendChild(updatedon)
   sn0 = document.createElement('p')
   sn0.innerHTML = 'Site ID: ' + datab[databindex].site_name
   main.appendChild(sn0)
@@ -133,6 +133,7 @@ function search() {
   document.getElementById('hiddent').innerHTML = 'search'
   page = 'Search'
   search_for = document.getElementById('searchbar').value
+  search_for = search_for.replace(/((https:\/\/?)|(http:\/\/)?)/,'').replace(/\/.*/,'')
   lastSearch = search_for
   main.innerHTML = ''
 

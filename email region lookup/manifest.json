@@ -1,0 +1,10 @@
+{
+  "name": "SimpleBiz Duda Site Lookup",
+  "description": "Test Extension to find all duda sites for Simple.Biz (hopefully faster and more reliable than the Tans, Blues, or Bitrix)",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "favicon.png"
+  }
+}

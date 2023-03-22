@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Simple.biz Area Code Lookup</title>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet" />
+	<link href="styles.css" rel="stylesheet">
+    <script src="popup2.js"></script>
+  </head>
+  <body>
+	<span id='qmark'><span class='qmark-text'>la<span id='snake'>s</span>t updated 3/21/2023</span><span class='qmark-mark'>#</span></span>
+    <h4>Area Code Lookup</h4>
+    <form id="myForm">
+    <input type="text" id="entryvalue" maxlength="3" minlength="3" pattern="\d\d\d" required size="3" placeholder="###" autocomplete="off"/>
+    <input type="submit" value="Check" id="checkbutton" onsubmit="return false;"/><br/>
+    <span id="code">&nbsp;</span> | <span id="state">&nbsp;</span> | <span id="region">&nbsp;</span>/<span id="lead">&nbsp;</span><br/>
+	<span id="number">&nbsp;</span> <span id="guidance">&nbsp;</span><br/>
+	<span id="notice">&nbsp;</span>
+    </form>
+	
+  </body>
+</html>

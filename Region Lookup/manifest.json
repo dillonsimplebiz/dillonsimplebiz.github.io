@@ -1,0 +1,10 @@
+{
+  "name": "22222 Region Lookup",
+  "description": "Test Extension to lookup regions based on email.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "favicon.png"
+  }
+}

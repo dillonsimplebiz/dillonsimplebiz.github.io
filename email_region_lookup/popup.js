@@ -10,8 +10,29 @@ searchBar.addEventListener('keypress', function(e) {
 
 document.getElementById('search').addEventListener('click', searchForEmail)
 
-function getRegionByCode(area) {
-  negtemp = 0
+document.getElementById('getFilter').addEventListener('click', showFilters)
+
+
+
+function showFilters(){
+	document.getElementById('filterPM').style = 'display:block'
+	for (var i=0;i<document.getElementsByClassName('filterPM_copy').length;i++){
+		document.getElementsByClassName('filterPM_copy')[i].addEventListener('click', copyFilter)
+	}
+}
+
+function copyFilter(){
+	var region = this.innerHTML
+	var arr = []
+	var keys = Object.keys(bulkList)
+	for (var i = 0;i<keys.length;i++){
+		var area = getRegionByCode(bulkList[keys[i]].match("[0-9]{3}")[0])
+		if (area == region){
+			arr.push(keys[i])
+		}
+	}
+	console.log(arr)
+	//forward to single email, or forward to each region's email?
 }
 
 function searchForEmail() {

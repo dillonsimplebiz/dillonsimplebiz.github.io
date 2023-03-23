@@ -257,6 +257,43 @@ function init() {
 function getRegionByCode(code) {
   var region = '??'
   switch (code) {
+    case "484":
+    case "856":
+    case "609":
+    case "640":
+    case "732":
+    case "973":
+    case "862":
+    case "201":
+    case "551":
+    case "718":
+    case "347":
+    case "917":
+    case "929":
+    case "212":
+    case "332":
+    case "646":
+    case "914":
+    case "631":
+    case "934":
+    case "203":
+    case "475":
+    case "860":
+    case "959":
+    case "413":
+    case "508":
+    case "774":
+    case "617":
+    case "857":
+    case "781":
+    case "339":
+    case "978":
+    case "351":
+    case "207":
+    case "603":
+    case "516":
+    case "401":
+    case "802":
     case "283":
     case "814":
     case "717":
@@ -279,69 +316,16 @@ function getRegionByCode(code) {
     case "908":
     case "301":
     case "240":
-      region = 'DC'
-      break
-    case "203":
-    case "475":
-    case "860":
-    case "959":
-    case "413":
-    case "508":
-    case "774":
-    case "617":
-    case "857":
-    case "781":
-    case "339":
-    case "978":
-    case "351":
-    case "207":
-    case "603":
-    case "516":
-    case "401":
-    case "802":
-      region = 'NEST'
-      break
-    case "484":
-    case "856":
-    case "609":
-    case "640":
-    case "732":
-    case "973":
-    case "862":
-    case "201":
-    case "551":
-    case "718":
-    case "347":
-    case "917":
-    case "929":
-    case "212":
-    case "332":
-    case "646":
-    case "914":
-    case "631":
-    case "934":
-      region = "JERSEY"
-      break
-    case "706":
-    case "762":
-    case "404":
-    case "470":
-    case "678":
-    case "770":
-    case "227":
-    case "252":
-    case "919":
-    case "843":
-    case "803":
-    case "864":
-    case "787":
-    case "939":
-    case "865":
-    case "423":
-    case "606":
-    case "854":
-    case "859":
-      region = "SOUTHEAST"
+    case "908":
+    case "716":
+    case "585":
+    case "315":
+    case "680":
+    case "607":
+    case "845":
+    case "518":
+    case "838":
+      region = 'JERSEY'
       break
     case "659":
     case "407":
@@ -360,7 +344,7 @@ function getRegionByCode(code) {
     case "205":
     case "256":
     case "932":
-      region = "NORTHFLORIDA"
+      region = 'NORTHFLORIDA'
       break
     case "276":
     case "540":
@@ -374,6 +358,28 @@ function getRegionByCode(code) {
     case "443":
     case "667":
     case "302":
+    case "304":
+    case "681":
+    case "301":
+    case "240":
+    case "423":
+    case "606":
+    case "854":
+    case "859":
+    case "706":
+    case "762":
+    case "404":
+    case "470":
+    case "678":
+    case "770":
+    case "227":
+    case "252":
+    case "919":
+    case "843":
+    case "803":
+    case "864":
+    case "787":
+    case "939":
       region = "VIRGINIA"
       break
     case "747":
@@ -413,6 +419,198 @@ function getRegionByCode(code) {
     case "661":
       region = "SOCAL"
       break
+    case "218":
+    case "320":
+    case "507":
+    case "763":
+    case "651":
+    case "952":
+    case "612":
+    case "715":
+    case "534":
+    case "906":
+    case "608":
+    case "920":
+    case "262":
+    case "414":
+    case "847":
+    case "224":
+    case "630":
+    case "331":
+      region = "NORTHLAKES"
+      break
+    case "504":
+    case "985":
+    case "225":
+    case "337":
+    case "318":
+    case "573":
+    case "636":
+    case "314":
+    case "479":
+    case "501":
+    case "870":
+    case "409":
+    case "660":
+    case "417":
+    case "816":
+    case "662":
+    case "601":
+    case "769":
+    case "228":
+    case "903":
+    case "430":
+    case "936":
+    case "254":
+    case "512":
+    case "737":
+    case "361":
+    case "956":
+    case "432":
+    case "915":
+    case "979":
+    case "325":
+    case "210":
+    case "726":
+    case "830":
+    case "713":
+    case "281":
+    case "346":
+    case "832":
+    case "712":
+    case "515":
+    case "641":
+    case "319":
+    case "563":
+    case "214":
+    case "469":
+    case "972":
+    case "817":
+    case "682":
+    case "940":
+    case "806":
+      region = "BAYOU"
+      break
+    case "360":
+    case "564":
+    case "503":
+    case "971":
+    case "509":
+    case "541":
+    case "458":
+    case "208":
+    case "986":
+    case "406":
+    case "775":
+    case "801":
+    case "385":
+    case "435":
+    case "928":
+    case "623":
+    case "602":
+    case "480":
+    case "520":
+    case "702":
+    case "725":
+    case "403":
+    case "587":
+    case "780":
+    case "236":
+    case "250":
+    case "604":
+    case "672":
+    case "778":
+    case "316":
+    case "620":
+    case "785":
+    case "913":
+    case "308":
+    case "402":
+    case "531":
+    case "605":
+    case "701":
+    case "303":
+    case "720":
+    case "970":
+    case "307":
+    case "206":
+    case "253":
+    case "425":
+    case "575":
+    case "505":
+    case "719":
+    case "580":
+    case "405":
+    case "918":
+    case "539":
+      region = "WEST"
+      break
+    case "786":
+    case "954":
+    case "754":
+    case "305":
+    case "239":
+    case "561":
+    case "863":
+    case "941":
+    case "727":
+    case "813":
+      region = "SOUTHFLORIDA"
+      break
+    case "513":
+    case "937":
+    case "614":
+    case "380":
+    case "740":
+    case "220":
+    case "270":
+    case "364":
+    case "330":
+    case "234":
+    case "440":
+    case "216":
+    case "724":
+    case "878":
+    case "412":
+    case "283":
+    case "814":
+    case "717":
+    case "223":
+    case "272":
+    case "570":
+    case "610":
+    case "484":
+    case "215":
+    case "267":
+    case "445":
+    case "901":
+    case "731":
+    case "931":
+    case "615":
+    case "629":
+    case "574":
+    case "260":
+    case "419":
+    case "567":
+    case "865":
+      region = "MIDATL2"
+      break
+    case "815":
+    case "779":
+    case "309":
+    case "217":
+    case "618":
+    case "219":
+    case "502":
+    case "812":
+    case "930":
+    case "765":
+    case "317":
+    case "463":
+    case "708":
+    case "773":
+    case "872":
+    case "312":
     case "447":
     case "248":
     case "947":
@@ -439,194 +637,6 @@ function getRegionByCode(code) {
     case "226":
     case "548":
     case "807":
-    case "574":
-    case "260":
-    case "419":
-    case "567":
-      region = "EASTLAKES"
-      break
-    case "218":
-    case "320":
-    case "507":
-    case "763":
-    case "651":
-    case "952":
-    case "612":
-    case "715":
-    case "534":
-    case "906":
-    case "608":
-    case "920":
-    case "262":
-    case "414":
-    case "847":
-    case "224":
-    case "630":
-    case "331":
-      region = "NORTHLAKES"
-      break
-    case "903":
-    case "430":
-    case "936":
-    case "254":
-    case "512":
-    case "737":
-    case "361":
-    case "956":
-    case "432":
-    case "915":
-    case "979":
-    case "325":
-    case "210":
-    case "726":
-    case "830":
-    case "713":
-    case "281":
-    case "346":
-    case "832":
-      region = "TEXAS"
-      break
-    case "504":
-    case "985":
-    case "225":
-    case "337":
-    case "318":
-    case "573":
-    case "636":
-    case "314":
-    case "479":
-    case "501":
-    case "870":
-    case "409":
-    case "660":
-    case "417":
-    case "816":
-    case "662":
-    case "601":
-    case "769":
-    case "228":
-    case "901":
-    case "731":
-    case "931":
-    case "615":
-    case "629":
-      region = "BAYOU"
-      break
-    case "403":
-    case "587":
-    case "780":
-    case "236":
-    case "250":
-    case "604":
-    case "672":
-    case "778":
-    case "316":
-    case "620":
-    case "785":
-    case "913":
-    case "308":
-    case "402":
-    case "531":
-    case "605":
-    case "701":
-    case "303":
-    case "720":
-    case "970":
-    case "307":
-    case "206":
-    case "253":
-    case "425":
-    case "712":
-    case "515":
-    case "641":
-    case "319":
-    case "563":
-      region = "DAKOTA"
-      break
-    case "360":
-    case "564":
-    case "503":
-    case "971":
-    case "509":
-    case "541":
-    case "458":
-    case "208":
-    case "986":
-    case "406":
-    case "775":
-    case "801":
-    case "385":
-    case "435":
-    case "928":
-    case "623":
-    case "602":
-    case "480":
-    case "520":
-    case "702":
-    case "725":
-      region = "WEST"
-      break
-    case "786":
-    case "954":
-    case "754":
-    case "305":
-    case "239":
-    case "561":
-    case "863":
-    case "941":
-    case "727":
-    case "813":
-      region = "SOUTHFLORIDA"
-      break
-    case "214":
-    case "469":
-    case "972":
-    case "817":
-    case "682":
-    case "940":
-    case "806":
-    case "575":
-    case "505":
-    case "719":
-    case "580":
-    case "405":
-    case "918":
-    case "539":
-      region = "DESERT"
-      break
-    case "513":
-    case "937":
-    case "614":
-    case "380":
-    case "740":
-    case "220":
-    case "304":
-    case "681":
-    case "330":
-    case "234":
-    case "440":
-    case "216":
-    case "724":
-    case "878":
-    case "412":
-      region = "MIDATL2"
-      break
-    case "815":
-    case "779":
-    case "309":
-    case "217":
-    case "618":
-    case "219":
-    case "502":
-    case "812":
-    case "930":
-    case "765":
-    case "317":
-    case "463":
-    case "708":
-    case "773":
-    case "872":
-    case "312":
       region = "LOWERLAKES"
       break
     default:
@@ -1280,92 +1290,39 @@ function getRegionByState(stateAbbr) {
 function getLeadByRegion(region) {
   var lead = "";
   switch (region) {
-    case "DC":
-      lead = "Andrew";
-      break; //
-    case "NEST":
-      lead = "Amelia";
-      break;
     case "JERSEY":
-      lead = "Andrew";
-      break; //
-    case "SOUTHEAST":
-      lead = "Sterling";
+      lead = "Amelia";
+      break; 
+    case "NORTHFLORIDA"://///////////////
+      lead = "Dax";
       break;
-    case "NORTHFLORIDA":
-      lead = "Andrew";
-      break; //
     case "VIRGINIA":
-      lead = "Andrew";
-      break; //
+      lead = "Sterling";
+      break; 
     case "NOCAL":
-      lead = "Andrew";
-      break; //
+      lead = "JEFF";
+      break;
     case "SOCAL":
       lead = "Dana";
-      break;
-    case "EASTLAKES":
+      break; 
+    case "NORTHLAKES": ///////////////////////////
       lead = "Andrew";
-      break; //
-    case "NORTHLAKES":
-      lead = "Andrew";
-      break; //
-    case "TEXAS":
-      lead = "Andrew";
-      break; //
+      break; 
     case "BAYOU":
-      lead = "Andrew";
-      break; //
-    case "DAKOTA":
-      lead = "Andrew";
-      break; //
+      lead = "Emma";
+      break; 
     case "WEST":
       lead = "Leo";
       break;
-    case "SOUTHFLORIDA":
-      lead = "Andrew";
-      break; //
-    case "DESERT":
-      lead = "Andrew";
-      break; //
+    case "SOUTHFLORIDA": //////PRIORITY///////////////////
+      lead = "Dax";
+      break; 
     case "MIDATL2":
-      lead = "Andrew";
-      break; //
+      lead = "John";
+      break; 
     case "LOWERLAKES":
       lead = "Andrew";
-      break; //
-
-
-    case "LAKES":
-      lead = "Andrew";
-      break;
-    case "WEST":
-      lead = "Leo";
-      break;
-    case "CENTRAL":
-      lead = "Emma";
-      break;
-    case "CALI":
-      lead = "Jeff";
-      break;
-    case "NEST":
-      lead = "Amelia";
-      break;
-    case "SOUTH":
-      lead = "Emma";
-      break;
-    case "MIDATL":
-      lead = "John";
-      break;
-    case "SOUTHEAST":
-      lead = "Sterling";
-      break;
-    case "CALI2":
-      lead = "Jeff";
-      break;
-    case "SOUTH-2":
-      lead = "Emma";
-      break;
+      break; 
   }
   return lead;
 }
@@ -3158,6 +3115,18 @@ function getEmailByName(name) {
       break;
     case "Dana":
       email = "danap@simple.biz";
+      break;
+    case "Patrick":
+      email = "patrick@simple.biz";
+      break;
+    case "Mcgyver":
+      email = "mcgyver@simple.biz";
+      break;
+    case "Josh":
+      email = "josht@simple.biz";
+      break;
+    case "Elijah":
+      email = "elijahm@simple.biz";
       break;
   }
   return email;

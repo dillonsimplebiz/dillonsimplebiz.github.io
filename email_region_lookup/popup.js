@@ -35,6 +35,9 @@ function copyFilter(){
 	//forward to single email, or forward to each region's email?
 	//forward to each others email
 	filterForEmail = arr.join(' OR ')
+	while (filterForEmail != ''){
+	filterForEmail = arr.splice(0,((arr.join(' OR ').slice(0,1500).match(/ OR /g) || []).length - 1)).join(' OR ')
+	if (filterForEmail == ''){break}
 	forward_to = getEmailByName(getLeadByRegion(region))
 filename = 'forward to '+region+'.xml'
   text = `<?xml version='1.0' encoding='UTF-8'?>
@@ -69,6 +72,7 @@ filename = 'forward to '+region+'.xml'
   element.click();
 
   document.body.removeChild(element);
+}
 }
 
 function searchForEmail() {

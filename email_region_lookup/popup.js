@@ -27,7 +27,7 @@ function copyFilter(){
 	var keys = Object.keys(bulkList)
 	for (var i = 0;i<keys.length;i++){
 		var area = getRegionByCode(bulkList[keys[i]].match("[0-9]{3}")[0])
-		if (area !== region){
+		if (area == region){
 			arr.push(keys[i])
 		}
 	}
@@ -36,7 +36,7 @@ function copyFilter(){
 	//forward to each others email
 	filterForEmail = arr.join(' OR ')
 	forward_to = getEmailByName(getLeadByRegion(region))
-filename = 'mailFilter.xml'
+filename = 'forward to '+region+'.xml'
   text = `<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
 	<title>Mail Filters</title>

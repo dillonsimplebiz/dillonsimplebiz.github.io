@@ -27,12 +27,48 @@ function copyFilter(){
 	var keys = Object.keys(bulkList)
 	for (var i = 0;i<keys.length;i++){
 		var area = getRegionByCode(bulkList[keys[i]].match("[0-9]{3}")[0])
-		if (area == region){
+		if (area !== region){
 			arr.push(keys[i])
 		}
 	}
-	console.log(arr)
+	console.log(arr) // array of emails
 	//forward to single email, or forward to each region's email?
+	//forward to each others email
+	filterForEmail = arr.join(' OR ')
+	forward_to = getEmailByName(getLeadByRegion(region))
+filename = 'mailFilter.xml'
+  text = `<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+	<title>Mail Filters</title>
+	<id>tag:mail.google.com,2008:filters:z0000001679679588653*2088132869026123158</id>
+	<updated>2023-03-24T17:40:09Z</updated>
+	<author>
+		<name>Dillon Long</name>
+		<email>dillonlong@simple.biz</email>
+	</author>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z0000001679679588653*2088132869026123158</id>
+		<updated>2023-03-24T17:40:09Z</updated>
+		<content></content>
+		<apps:property name='from' value='`+filterForEmail+`'/>
+		<apps:property name='shouldArchive' value='true'/>
+		<apps:property name='forwardTo' value='`+forward_to+`'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+</feed>`
+	var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
 
 function searchForEmail() {

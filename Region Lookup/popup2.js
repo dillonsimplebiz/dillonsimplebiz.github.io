@@ -257,7 +257,6 @@ function init() {
 function getRegionByCode(code) {
   var region = '??'
   switch (code) {
-    case "484":
     case "856":
     case "609":
     case "640":
@@ -295,11 +294,6 @@ function getRegionByCode(code) {
     case "401":
     case "802":
     case "283":
-    case "814":
-    case "717":
-    case "223":
-    case "272":
-    case "570":
     case "716":
     case "585":
     case "315":
@@ -308,23 +302,8 @@ function getRegionByCode(code) {
     case "845":
     case "518":
     case "838":
-    case "610":
+    case "908":
     case "848":
-    case "215":
-    case "267":
-    case "445":
-    case "908":
-    case "301":
-    case "240":
-    case "908":
-    case "716":
-    case "585":
-    case "315":
-    case "680":
-    case "607":
-    case "845":
-    case "518":
-    case "838":
       region = 'JERSEY'
       break
     case "659":
@@ -338,7 +317,7 @@ function getRegionByCode(code) {
     case "904":
     case "229":
     case "912":
-    case "487":
+    case "478":
     case "334":
     case "251":
     case "205":
@@ -1294,7 +1273,7 @@ function getLeadByRegion(region) {
       lead = "Amelia";
       break; 
     case "NORTHFLORIDA"://///////////////
-      lead = "Dax";
+      lead = "Patrick";
       break;
     case "VIRGINIA":
       lead = "Sterling";
@@ -1306,7 +1285,7 @@ function getLeadByRegion(region) {
       lead = "Dana";
       break; 
     case "NORTHLAKES": ///////////////////////////
-      lead = "Andrew";
+      lead = "Elijah";
       break; 
     case "BAYOU":
       lead = "Emma";
@@ -1315,7 +1294,7 @@ function getLeadByRegion(region) {
       lead = "Leo";
       break;
     case "SOUTHFLORIDA": //////PRIORITY///////////////////
-      lead = "Dax";
+      lead = "Josh";
       break; 
     case "MIDATL2":
       lead = "John";
@@ -3047,7 +3026,7 @@ function getEmailByName(name) {
     case "Theodore":
       email = "theodore@simple.biz";
       break;
-    case "Elijah":
+    case "Elijah_old":
       email = "elijah@simple.biz";
       break;
     case "Chad":

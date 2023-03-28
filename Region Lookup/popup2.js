@@ -1292,7 +1292,7 @@ function getLeadByRegion(region) {
       lead = "Mcgyver";
       break; 
     case "NOCAL":
-      lead = "JEFF";
+      lead = "Jeffrey";
       break;
     case "SOCAL":
       lead = "Dana";
@@ -3006,7 +3006,7 @@ function getEmailByName(name) {
     case "Andrew":
       email = "andrew@simple.biz";
       break;
-    case "Jeff":
+    case "Jeffrey":
       email = "jeffreyo@simple.biz";
       break;
     case "Ray":

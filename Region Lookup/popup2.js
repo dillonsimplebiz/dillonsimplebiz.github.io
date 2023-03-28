@@ -325,22 +325,7 @@ function getRegionByCode(code) {
     case "938":
       region = 'NORTHFLORIDA'
       break
-    case "276":
-    case "540":
-    case "434":
-    case "703":
-    case "571":
-    case "804":
-    case "757":
-    case "202":
-    case "410":
-    case "443":
-    case "667":
-    case "302":
-    case "304":
-    case "681":
-    case "301":
-    case "240":
+    case "865":
     case "423":
     case "606":
     case "854":
@@ -359,6 +344,22 @@ function getRegionByCode(code) {
     case "864":
     case "787":
     case "939":
+      region = "SOUTHEAST"
+      break
+    case "276":
+    case "540":
+    case "434":
+    case "804":
+    case "757":
+    case "410":
+    case "443":
+    case "667":
+    case "302":
+    case "202":
+    case "703":
+    case "571":
+    case "301":
+    case "240":
       region = "VIRGINIA"
       break
     case "747":
@@ -571,7 +572,8 @@ function getRegionByCode(code) {
     case "260":
     case "419":
     case "567":
-    case "865":
+    case "304":
+    case "681":
       region = "MIDATL2"
       break
     case "815":
@@ -625,7 +627,6 @@ function getRegionByCode(code) {
   }
   return region
 }
-
 function getStateByCode(code) {
   var stateAbbr = "??";
   switch (code) {
@@ -1275,8 +1276,11 @@ function getLeadByRegion(region) {
     case "NORTHFLORIDA":
       lead = "Patrick";
       break;
-    case "VIRGINIA":
+    case "SOUTHEAST":
       lead = "Sterling";
+      break; 
+    case "VIRGINIA":
+      lead = "Mcgyver";
       break; 
     case "NOCAL":
       lead = "JEFF";
@@ -1305,7 +1309,6 @@ function getLeadByRegion(region) {
   }
   return lead;
 }
-
 function getNumberByCode(code) {
   var number = "";
   switch (code) {
@@ -3017,7 +3020,7 @@ function getEmailByName(name) {
     case "Katina":
       email = "katina@simple.biz";
       break;
-    case "Alex":
+    case "Alex_old":
       email = "alex@simple.biz";
       break;
     case "Mat":
@@ -3106,6 +3109,15 @@ function getEmailByName(name) {
       break;
     case "Elijah":
       email = "elijahm@simple.biz";
+      break;
+    case "Alexander":
+      email = "alexandere@simple.biz";
+      break;
+    case "Reyna":
+      email = "reynaj@simple.biz";
+      break;
+    case "Ralph":
+      email = "ralphs@simple.biz";
       break;
   }
   return email;

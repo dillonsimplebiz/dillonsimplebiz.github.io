@@ -294,6 +294,9 @@ function getRegionByCode(code) {
     case "401":
     case "802":
     case "283":
+    case "848":
+      region = 'JERSEY'
+      break
     case "716":
     case "585":
     case "315":
@@ -303,8 +306,20 @@ function getRegionByCode(code) {
     case "518":
     case "838":
     case "908":
-    case "848":
-      region = 'JERSEY'
+    case "814":
+    case "717":
+    case "223":
+    case "272":
+    case "570":
+    case "610":
+    case "484":
+    case "215":
+    case "267":
+    case "445":
+    case "582":
+    case "301":
+    case "240":
+      region = 'DC'
       break
     case "659":
     case "407":
@@ -358,8 +373,6 @@ function getRegionByCode(code) {
     case "202":
     case "703":
     case "571":
-    case "301":
-    case "240":
       region = "VIRGINIA"
       break
     case "747":
@@ -553,25 +566,11 @@ function getRegionByCode(code) {
     case "878":
     case "412":
     case "283":
-    case "814":
-    case "717":
-    case "223":
-    case "272":
-    case "570":
-    case "610":
-    case "484":
-    case "215":
-    case "267":
-    case "445":
     case "901":
     case "731":
     case "931":
     case "615":
     case "629":
-    case "574":
-    case "260":
-    case "419":
-    case "567":
     case "304":
     case "681":
       region = "MIDATL2"
@@ -593,17 +592,6 @@ function getRegionByCode(code) {
     case "872":
     case "312":
     case "447":
-    case "248":
-    case "947":
-    case "313":
-    case "586":
-    case "734":
-    case "810":
-    case "231":
-    case "269":
-    case "517":
-    case "616":
-    case "989":
     case "416":
     case "437":
     case "647":
@@ -620,6 +608,23 @@ function getRegionByCode(code) {
     case "807":
       region = "LOWERLAKES"
       break
+    case "574":
+    case "260":
+    case "419":
+    case "567":
+    case "248":
+    case "947":
+    case "313":
+    case "586":
+    case "734":
+    case "810":
+    case "231":
+    case "269":
+    case "517":
+    case "616":
+    case "989":
+      region = "EASTLAKES"
+      break
     default:
       return "Missing code";
       break;
@@ -627,6 +632,7 @@ function getRegionByCode(code) {
   }
   return region
 }
+
 function getStateByCode(code) {
   var stateAbbr = "??";
   switch (code) {
@@ -1273,6 +1279,9 @@ function getLeadByRegion(region) {
     case "JERSEY":
       lead = "Amelia";
       break; 
+    case "DC":
+      lead = "??";/////////////////////////////////////////////////////////////////////////
+      break; 
     case "NORTHFLORIDA":
       lead = "Patrick";
       break;
@@ -1306,9 +1315,13 @@ function getLeadByRegion(region) {
     case "LOWERLAKES":
       lead = "Andrew";
       break; 
+    case "EASTLAKES":
+      lead = "Alexander";
+      break; 
   }
   return lead;
 }
+
 function getNumberByCode(code) {
   var number = "";
   switch (code) {

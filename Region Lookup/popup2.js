@@ -295,8 +295,6 @@ function getRegionByCode(code) {
     case "802":
     case "283":
     case "848":
-      region = 'JERSEY'
-      break
     case "716":
     case "585":
     case "315":
@@ -306,20 +304,7 @@ function getRegionByCode(code) {
     case "518":
     case "838":
     case "908":
-    case "814":
-    case "717":
-    case "223":
-    case "272":
-    case "570":
-    case "610":
-    case "484":
-    case "215":
-    case "267":
-    case "445":
-    case "582":
-    case "301":
-    case "240":
-      region = 'DC'
+      region = 'JERSEY'
       break
     case "659":
     case "407":
@@ -360,20 +345,6 @@ function getRegionByCode(code) {
     case "787":
     case "939":
       region = "SOUTHEAST"
-      break
-    case "276":
-    case "540":
-    case "434":
-    case "804":
-    case "757":
-    case "410":
-    case "443":
-    case "667":
-    case "302":
-    case "202":
-    case "703":
-    case "571":
-      region = "VIRGINIA"
       break
     case "747":
     case "209":
@@ -573,6 +544,17 @@ function getRegionByCode(code) {
     case "629":
     case "304":
     case "681":
+    case "814":
+    case "717":
+    case "223":
+    case "272":
+    case "570":
+    case "610":
+    case "484":
+    case "215":
+    case "267":
+    case "445":
+    case "582":
       region = "MIDATL2"
       break
     case "815":
@@ -607,6 +589,22 @@ function getRegionByCode(code) {
     case "548":
     case "807":
       region = "LOWERLAKES"
+      break
+    case "276":
+    case "540":
+    case "434":
+    case "804":
+    case "757":
+    case "410":
+    case "443":
+    case "667":
+    case "302":
+    case "202":
+    case "703":
+    case "571":
+    case "301":
+    case "240":
+      region = "VIRGINIA"
       break
     case "574":
     case "260":
@@ -1286,13 +1284,13 @@ function getLeadByRegion(region) {
       lead = "Patrick";
       break;
     case "SOUTHEAST":
-      lead = "Sterling";
+      lead = "Jeffrey";
       break; 
     case "VIRGINIA":
       lead = "Mcgyver";
       break; 
     case "NOCAL":
-      lead = "Jeffrey";
+      lead = "Reyna";
       break;
     case "SOCAL":
       lead = "Dana";
@@ -3007,7 +3005,7 @@ function getEmailByName(name) {
       email = "andrew@simple.biz";
       break;
     case "Jeffrey":
-      email = "jeffreyo@simple.biz";
+      email = "jeffrey@simple.biz";
       break;
     case "Ray":
       email = "ray@simple.biz";

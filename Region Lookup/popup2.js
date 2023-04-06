@@ -344,6 +344,16 @@ function getRegionByCode(code) {
     case "864":
     case "787":
     case "939":
+	//adding northcarolina
+	case "704":
+	case "252":
+	case "336":
+	case "704":
+	case "828":
+	case "910":
+	case "919":
+	case "980":
+	case "984":
       region = "SOUTHEAST"
       break
     case "747":
@@ -634,6 +644,18 @@ function getRegionByCode(code) {
 function getStateByCode(code) {
   var stateAbbr = "??";
   switch (code) {
+	//adding north carolina
+	case "704":
+	case "252":
+	case "336":
+	case "704":
+	case "828":
+	case "910":
+	case "919":
+	case "980":
+	case "984":
+	  stateAbbr = "NC";
+	  break;
     case "403":
     case "587":
     case "780":
@@ -1323,6 +1345,21 @@ function getLeadByRegion(region) {
 function getNumberByCode(code) {
   var number = "";
   switch (code) {
+	//adding north carolina
+	case "704":
+	case "980":
+	  number = '(704) 748-0331';
+	  break;
+	case "252":
+	case "336":
+	case "704":
+	case "828":
+	case "910":
+	case "919":
+	case "980":
+	case "984":
+	  number = 'N/A';
+	  break;
     case '403':
     case '587':
       number = '(403) 744-5084';
@@ -2162,6 +2199,20 @@ function getNumberByCode(code) {
 function getGuidanceByCode(code) {
   var guidance = "";
   switch (code) {
+	//adding north carolina
+	case "704":
+	case "980":
+	  guidance = '(EST) We are in Huntersville. Bob\'s partner is in Matthews.';
+	  break;
+	case "252":
+	case "336":
+	case "704":
+	case "828":
+	case "910":
+	case "919":
+	case "984":
+	 guidance = 'N/A';
+	 break;
     case '403':
     case '587':
       guidance = '(MST) In Calgary (KAL gree), in Edgemont (a neighborhood), just up from Nose Hill Park.';
@@ -3086,7 +3137,7 @@ function getEmailByName(name) {
       email = "lane@simple.biz";
       break;
     case "Sterling":
-      email = "sterlingp@simple.biz";
+      email = "sterling@simple.biz";
       break;
     case "Nica":
       email = "nicar@simple.biz";

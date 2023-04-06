@@ -82,8 +82,6 @@ background-image:url(/Resources/images/6-Benefits-of-Hiring-Business-Consultant-
 background-size:cover !important}
 *#dm *.dmBody *.u_1105438698{
 width:100% !important}
-*#dm *.dmBody *.u_1344329950 .photoGalleryThumbs .image-container a{
-background-size:contain !important}
 *#dm *.dmBody div.u_1956127168{
 background-repeat:no-repeat !important;
 background-image:url(/Resources/images/pexels-photo-789822-640w.jpeg) !important;
@@ -119,6 +117,8 @@ border-style:solid !important;
 border-width:1px !important}
 *#dm *.dmBody div.u_1529817194{
 background-color:rgba(0,82,152,1) !important}
+*#dm *.dmBody *.u_1729402796{
+width:100% !important}
 
 
     *#dm *.d-page-1716942098 DIV.dmInner{

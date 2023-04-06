@@ -82,8 +82,6 @@ background-image:url(/Resources/images/6-Benefits-of-Hiring-Business-Consultant-
 background-size:cover !important}
 *#dm *.dmBody *.u_1105438698{
 width:100% !important}
-*#dm *.dmBody *.u_1344329950 .photoGalleryThumbs .image-container a{
-background-size:contain !important}
 *#dm *.dmBody div.u_1956127168{
 background-repeat:no-repeat !important;
 background-image:url(/Resources/images/pexels-photo-789822-2880w.jpeg) !important;
@@ -119,6 +117,8 @@ border-style:solid !important;
 border-width:1px !important}
 *#dm *.dmBody div.u_1529817194{
 background-color:rgba(0,82,152,1) !important}
+*#dm *.dmBody *.u_1729402796{
+width:100% !important}
 
 
     *#dm *.d-page-1716942098 DIV.dmInner{
@@ -203,32 +203,6 @@ margin-bottom:0 !important;
 padding-right:0 !important;
 min-width:0 !important;
 display:block !important}
-*#dm *.dmBody *.u_1344329950 .photoGalleryThumbs{
-padding:10px !important}
-*#dm *.dmBody *.u_1344329950 .layout-container{
-padding:10px !important}
-*#dm *.dmBody *.u_1344329950 .photoGalleryViewAll{
-padding:0 20px !important}
-*#dm *.dmBody *.u_1344329950 .photoGalleryThumbs .image-container a{
-padding-top:147px !important}
-*#dm *.dmBody div.u_1344329950{
-float:none !important;
-top:0 !important;
-left:0 !important;
-width:calc(100% - 0px) !important;
-position:relative !important;
-height:auto !important;
-padding-top:0 !important;
-padding-left:0 !important;
-padding-bottom:0 !important;
-margin-right:auto !important;
-margin-left:auto !important;
-max-width:100% !important;
-margin-top:0 !important;
-margin-bottom:0 !important;
-padding-right:0 !important;
-min-width:25px !important;
-text-align:center !important}
 *#dm *.dmBody div.u_1189501304{
 float:none !important;
 top:0 !important;
@@ -246,89 +220,6 @@ margin-top:8px !important;
 margin-bottom:8px !important;
 padding-right:0 !important;
 min-width:25px !important}
-*#dm *.dmBody div.u_1097539368{
-margin-top:0 !important;
-margin-bottom:0 !important;
-padding-top:0 !important;
-padding-bottom:0 !important;
-float:none !important;
-top:0 !important;
-left:0 !important;
-width:100% !important;
-position:relative !important;
-height:auto !important;
-padding-left:15px !important;
-margin-right:0 !important;
-margin-left:0 !important;
-max-width:calc(100% - 0px) !important;
-padding-right:0 !important;
-min-width:25px !important}
-*#dm *.dmBody div.u_1879389153{
-float:none !important;
-top:0 !important;
-left:0 !important;
-width:calc(100% - 0px) !important;
-position:relative !important;
-height:auto !important;
-padding-top:2px !important;
-padding-left:15px !important;
-padding-bottom:2px !important;
-margin-right:0 !important;
-margin-left:0 !important;
-max-width:586px !important;
-margin-top:11px !important;
-margin-bottom:8px !important;
-padding-right:0 !important;
-min-width:25px !important;
-display:block !important}
-*#dm *.dmBody div.u_1274417830{
-padding-left:0 !important;
-padding-right:0 !important;
-margin-left:0 !important;
-padding-top:0 !important;
-padding-bottom:0 !important;
-margin-top:0 !important;
-margin-bottom:0 !important;
-margin-right:0 !important}
-*#dm *.dmBody div.u_1956127168{
-padding-right:0 !important;
-padding-left:50px !important;
-background-position:50% 50% !important}
-*#dm *.dmBody div.u_1649982410{
-float:none !important;
-top:0 !important;
-left:0 !important;
-width:100% !important;
-position:relative !important;
-height:auto !important;
-padding-top:80px !important;
-padding-left:40px !important;
-padding-bottom:80px !important;
-max-width:none !important;
-padding-right:40px !important;
-min-width:0 !important;
-text-align:center !important}
-*#dm *.dmBody div.u_1603427112{
-float:none !important;
-top:0 !important;
-left:0 !important;
-width:calc(100% - 0px) !important;
-position:relative !important;
-height:auto !important;
-padding-top:0 !important;
-padding-left:0 !important;
-padding-bottom:0 !important;
-margin-right:auto !important;
-margin-left:auto !important;
-max-width:100% !important;
-margin-top:31px !important;
-margin-bottom:0 !important;
-padding-right:0 !important;
-min-width:25px !important;
-text-align:center !important}
-*#dm *.dmBody div.u_1603427112 *.dmformsubmit{
-width:220px !important;
-height:50px !important}
 *#dm *.dmBody div.u_1097539368{
 margin-top:0 !important;
 margin-bottom:0 !important;

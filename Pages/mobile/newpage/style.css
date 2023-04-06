@@ -190,8 +190,6 @@ border-radius:100% !important;
 .video-circle{
 border-radius:50% !important;
 object-fit:cover !important}
-*#dm *.dmBody div.u_1949358597{
-}
 *#dm *.dmBody div.u_1369168276 hr{
 color:rgba(0,0,0,1) !important;
 border-top-style:solid !important;
@@ -486,12 +484,12 @@ background-image:url(/Resources/images/pexels-photo-3153201-640w.jpeg) !importan
 background-size:cover !important}
 *#dm *.dmBody *.u_1318344943{
 width:100% !important}
-*#dm *.dmBody *.u_1283950537 .photoGalleryThumbs .image-container a{
-background-size:contain !important}
 *#dm *.dmBody div.u_1902870694{
 background-color:var(--color_3) !important;
 background-repeat:no-repeat !important;
 background-image:none !important}
+*#dm *.dmBody *.u_1548108356{
+width:100% !important}
 
 
     *#dm *.dmBody div.u_HOWITWORKS{

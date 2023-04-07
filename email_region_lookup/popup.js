@@ -225,6 +225,9 @@ function getEmailByName(name) {
     case "Ralph":
       email = "ralphs@simple.biz";
       break;
+    case "Nico":
+      email = "nicof@simple.biz";
+      break;
   }
   return email;
 }
@@ -234,9 +237,6 @@ function getLeadByRegion(region) {
   switch (region) {
     case "JERSEY":
       lead = "Amelia";
-      break; 
-    case "DC":
-      lead = "??";/////////////////////////////////////////////////////////////////////////
       break; 
     case "NORTHFLORIDA":
       lead = "Patrick";
@@ -265,7 +265,7 @@ function getLeadByRegion(region) {
     case "SOUTHFLORIDA": 
       lead = "Josh";
       break; 
-    case "MIDATL2":
+    case "MIDATL":
       lead = "John";
       break; 
     case "LOWERLAKES":
@@ -273,6 +273,9 @@ function getLeadByRegion(region) {
       break; 
     case "EASTLAKES":
       lead = "Alexander";
+      break; 
+    case "DC":
+      lead = "Nico";
       break; 
   }
   return lead;
@@ -318,17 +321,7 @@ function getRegionByCode(code) {
     case "516":
     case "401":
     case "802":
-    case "283":
     case "848":
-    case "716":
-    case "585":
-    case "315":
-    case "680":
-    case "607":
-    case "845":
-    case "518":
-    case "838":
-    case "908":
       region = 'JERSEY'
       break
     case "659":
@@ -509,6 +502,9 @@ function getRegionByCode(code) {
     case "604":
     case "672":
     case "778":
+    case "206":
+    case "253":
+    case "425":
     case "316":
     case "620":
     case "785":
@@ -522,9 +518,6 @@ function getRegionByCode(code) {
     case "720":
     case "970":
     case "307":
-    case "206":
-    case "253":
-    case "425":
     case "575":
     case "505":
     case "719":
@@ -569,18 +562,7 @@ function getRegionByCode(code) {
     case "629":
     case "304":
     case "681":
-    case "814":
-    case "717":
-    case "223":
-    case "272":
-    case "570":
-    case "610":
-    case "484":
-    case "215":
-    case "267":
-    case "445":
-    case "582":
-      region = "MIDATL2"
+      region = "MIDATL"
       break
     case "815":
     case "779":
@@ -627,8 +609,6 @@ function getRegionByCode(code) {
     case "202":
     case "703":
     case "571":
-    case "301":
-    case "240":
       region = "VIRGINIA"
       break
     case "574":
@@ -647,6 +627,30 @@ function getRegionByCode(code) {
     case "616":
     case "989":
       region = "EASTLAKES"
+      break
+    case "716":
+    case "585":
+    case "315":
+    case "680":
+    case "607":
+    case "845":
+    case "518":
+    case "838":
+    case "908":
+    case "814":
+    case "717":
+    case "223":
+    case "272":
+    case "570":
+    case "610":
+    case "484":
+    case "215":
+    case "267":
+    case "445":
+    case "582":
+    case "301":
+    case "240":
+      region = "DC"
       break
     default:
       return "Missing code";

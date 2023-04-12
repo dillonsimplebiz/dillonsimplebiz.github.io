@@ -225,8 +225,14 @@ function getEmailByName(name) {
     case "Ralph":
       email = "ralphs@simple.biz";
       break;
-    case "nick":
+    case "Nick":
       email = "nickf@simple.biz";
+      break;
+    case "Tony":
+      email = "tonyb@simple.biz";
+      break;
+    case "Joy":
+      email = "joyf@simple.biz";
       break;
   }
   return email;
@@ -275,7 +281,13 @@ function getLeadByRegion(region) {
       lead = "Alexander";
       break; 
     case "DC":
-      lead = "nick";
+      lead = "Nick";
+      break; 
+    case "NEST":
+      lead = "Tony";
+      break; 
+    case "TEXAS":
+      lead = "Joy";
       break; 
   }
   return lead;
@@ -303,6 +315,10 @@ function getRegionByCode(code) {
     case "914":
     case "631":
     case "934":
+    case "516":
+    case "848":
+      region = 'JERSEY'
+      break
     case "203":
     case "475":
     case "860":
@@ -318,11 +334,9 @@ function getRegionByCode(code) {
     case "351":
     case "207":
     case "603":
-    case "516":
     case "401":
     case "802":
-    case "848":
-      region = 'JERSEY'
+      region = 'NEST'
       break
     case "659":
     case "407":
@@ -422,27 +436,8 @@ function getRegionByCode(code) {
       region = "NORTHLAKES"
       break
     case "504":
-    case "985":
-    case "225":
-    case "337":
-    case "318":
-    case "573":
-    case "636":
-    case "314":
-    case "479":
-    case "501":
-    case "870":
-    case "409":
-    case "660":
-    case "417":
-    case "816":
-    case "662":
-    case "601":
-    case "769":
-    case "228":
-    case "903":
-    case "430":
-    case "936":
+      region = "BAYOU"
+      break
     case "254":
     case "512":
     case "737":
@@ -459,19 +454,7 @@ function getRegionByCode(code) {
     case "281":
     case "346":
     case "832":
-    case "712":
-    case "515":
-    case "641":
-    case "319":
-    case "563":
-    case "214":
-    case "469":
-    case "972":
-    case "817":
-    case "682":
-    case "940":
-    case "806":
-      region = "BAYOU"
+      region = "TEXAS"
       break
     case "360":
     case "564":

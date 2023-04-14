@@ -234,10 +234,15 @@ function getEmailByName(name) {
     case "Joy":
       email = "joyf@simple.biz";
       break;
+    case "Scott":
+      email = "scottc@simple.biz";
+      break;
+    case "JC":
+      email = "jc@simple.biz";
+      break;
   }
   return email;
 }
-
 function getLeadByRegion(region) {
   var lead = "";
   switch (region) {
@@ -289,10 +294,15 @@ function getLeadByRegion(region) {
     case "TEXAS":
       lead = "Joy";
       break; 
+    case "DAKOTA":
+      lead = "Scott";
+      break; 
+    case "DESERT":
+      lead = "JC";
+      break; 
   }
   return lead;
 }
-
 
 function getRegionByCode(code) {
   var region = '??'
@@ -436,6 +446,27 @@ function getRegionByCode(code) {
       region = "NORTHLAKES"
       break
     case "504":
+    case "985":
+    case "225":
+    case "337":
+    case "318":
+    case "573":
+    case "636":
+    case "314":
+    case "479":
+    case "501":
+    case "870":
+    case "409":
+    case "660":
+    case "417":
+    case "816":
+    case "662":
+    case "601":
+    case "769":
+    case "228":
+    case "903":
+    case "430":
+    case "936":
       region = "BAYOU"
       break
     case "254":
@@ -488,6 +519,8 @@ function getRegionByCode(code) {
     case "206":
     case "253":
     case "425":
+      region = "WEST"
+      break
     case "316":
     case "620":
     case "785":
@@ -501,6 +534,13 @@ function getRegionByCode(code) {
     case "720":
     case "970":
     case "307":
+    case "712":
+    case "515":
+    case "641":
+    case "319":
+    case "563":
+      region = "DAKOTA"
+      break
     case "575":
     case "505":
     case "719":
@@ -508,7 +548,14 @@ function getRegionByCode(code) {
     case "405":
     case "918":
     case "539":
-      region = "WEST"
+    case "214":
+    case "469":
+    case "972":
+    case "817":
+    case "682":
+    case "940":
+    case "806":
+      region = "DESERT"
       break
     case "786":
     case "954":
@@ -642,4 +689,3 @@ function getRegionByCode(code) {
   }
   return region
 }
-

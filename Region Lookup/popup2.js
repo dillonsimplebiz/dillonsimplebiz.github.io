@@ -1347,7 +1347,7 @@ function getLeadByRegion(region) {
       lead = "Scott";
       break; 
     case "DESERT":
-      lead = "JC";
+      lead = "Ralph";
       break; 
   }
   return lead;

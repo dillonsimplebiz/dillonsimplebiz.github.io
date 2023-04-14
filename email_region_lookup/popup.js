@@ -298,7 +298,7 @@ function getLeadByRegion(region) {
       lead = "Scott";
       break; 
     case "DESERT":
-      lead = "JC";
+      lead = "Ralph";
       break; 
   }
   return lead;
@@ -467,6 +467,13 @@ function getRegionByCode(code) {
     case "903":
     case "430":
     case "936":
+    case "270":
+    case "364":
+    case "901":
+    case "731":
+    case "931":
+    case "615":
+    case "629":
       region = "BAYOU"
       break
     case "254":
@@ -575,8 +582,8 @@ function getRegionByCode(code) {
     case "380":
     case "740":
     case "220":
-    case "270":
-    case "364":
+    case "304":
+    case "681":
     case "330":
     case "234":
     case "440":
@@ -585,13 +592,6 @@ function getRegionByCode(code) {
     case "878":
     case "412":
     case "283":
-    case "901":
-    case "731":
-    case "931":
-    case "615":
-    case "629":
-    case "304":
-    case "681":
       region = "MIDATL"
       break
     case "815":

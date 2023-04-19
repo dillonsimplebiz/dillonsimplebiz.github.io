@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 function main(){
   table.style = 'display:block'
   table1.style = 'display:none'

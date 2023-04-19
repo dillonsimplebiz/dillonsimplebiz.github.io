@@ -11,12 +11,13 @@ searchbar.focus()
 searchB.addEventListener('click', search)
 //var myAPIKey = process.env.BITRIXTEST;
 //console.log(myAPIKey)
-auth_code = auth.value
+
 //searches.value = 'TITLE'
 //searchbar.value = 'funeral'
 function search() {
   const selection = searches.value
   const searched = searchbar.value
+  auth_code = auth.value
   if (selection == 'empty') {
     err.innerHTML = 'Field must not be blank'
   } else if (searched == '') {

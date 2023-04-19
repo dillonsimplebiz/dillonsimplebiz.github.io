@@ -11,14 +11,18 @@
   <table id='table' style='display:block'>
     <style>
       table,
-      th,
+      tr,
       td {
         border: 1px solid black;
         border-collapse: collapse;
       }
+      tbody{
+    width: 100%;
+    display: table;
+}
 
     </style>
-    <tr>
+    <tr >
       <td>
         <label for="searches">Search what field?</label>
 
@@ -46,6 +50,9 @@
         <input id='searchbar'><button id='searchB'>
           Search
         </button>
+        <span id = 'displayed'>
+        Results: 0
+        </span>
       </td>
     </tr>
     <tr>
@@ -60,7 +67,7 @@
   <table id='table1' style='display:none'>
     <style>
 
-      td {
+      #td0 {
         width: 25%
       }
 
@@ -72,10 +79,14 @@
         border: 1px solid black;
         border-collapse: collapse;
       }
+      #td0 {
+        width: 25%
+      }
+      p{word-wrap:break-word;}
 
     </style>
     <tr>
-      <td> <a id='ButtonBack' target='_blank'>
+      <td id = 'td0'> <a id='ButtonBack' target='_blank'>
           <button type='submit'>
             Back to Results
           </button>

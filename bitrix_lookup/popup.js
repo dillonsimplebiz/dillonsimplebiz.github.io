@@ -20,7 +20,6 @@ catch{
 function search() {
   const selection = searches.value
   const searched = searchbar.value
-  auth_code = auth.value
   if (selection == 'empty') {
     err.innerHTML = 'Field must not be blank'
   } else if (searched == '') {

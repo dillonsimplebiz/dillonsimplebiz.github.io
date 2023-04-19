@@ -1,10 +1,10 @@
 {
-  "name": "SimpleBiz Email Region Lookup",
-  "description": "Test Extension to lookup regions based on email.",
+  "name": "Bitrix Lookup",
+  "description": "Bitrix Bashd",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
-    "default_icon": "favicon.png"
+    "default_icon": "training.bitrix24.com.ico"
   }
 }

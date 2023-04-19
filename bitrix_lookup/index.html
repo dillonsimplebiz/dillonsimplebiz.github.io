@@ -1,0 +1,211 @@
+<div>
+    <style>
+      p{
+        margin-left:4px;
+        margin-right:4px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+    </style>
+<input id='auth'>
+  <table id='table' style='display:block'>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+    </style>
+    <tr>
+      <td>
+        <label for="searches">Search what field?</label>
+
+        <select name="searches" id="searches">
+          <option value="empty"></option>
+          <option value="ID">ID</option>
+          <option value="TITLE">Business Name</option>
+          <option value="STAGE_ID">Stage</option>
+          <option value="UF_CRM_1647620775586">New main URL</option>
+          <option value="UF_CRM_1647620757299">Legacy URL</option>
+          <option value="UF_CRM_1647619374742">Owner</option>
+          <option value="UF_CRM_1647620698387">Phone Numbers</option>
+          <option value="UF_CRM_1647620715972">Email</option>
+          <option value="UF_CRM_1681248068566">PM email</option>
+          <option value="UF_CRM_1647653820587">Local Partner</option>
+          <option value="UF_CRM_1647616629267">Promise Date</option>
+          <option value="UF_CRM_1680303047490">Setup amount</option>
+          <option value="UF_CRM_1680303451526">Monthly amount</option>
+          <option value="UF_CRM_1680294914005">First payment run date</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input id='searchbar'><button id='searchB'>
+          Search
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id='err' style='color:red'></p>
+      </td>
+    </tr>
+
+
+  </table>
+
+  <table id='table1' style='display:none'>
+    <style>
+
+      td {
+        width: 25%
+      }
+
+    </style>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+    </style>
+    <tr>
+      <td> <a id='ButtonBack' target='_blank'>
+          <button type='submit'>
+            Back to Results
+          </button>
+        </a></td>
+      <td><a id='ButtonBitrix' target='_blank'>
+          <button type='submit'>
+            Open Bitrix
+          </button>
+        </a></td>
+
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>ID</p>
+      </td>
+      <td>
+        <p id='ID_'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Business Name</p>
+      </td>
+      <td>
+        <p id='TITLE'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Stage</p>
+      </td>
+      <td>
+        <p id='STAGE_ID'></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p style='color:blue'>Promise Date</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647616629267'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Owner</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647619374742'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Phone Numbers</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647620698387'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Email</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647620715972'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Legacy URL</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647620757299'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>New Main URL</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647620775586'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Local Partner</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1647653820587'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>First Payment Run Date</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1680294914005'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Setup Amount</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1680303047490'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>Monthly Amount</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1680303451526'></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style='color:blue'>PM Email</p>
+      </td>
+      <td>
+        <p id='UF_CRM_1681248068566'></p>
+      </td>
+    </tr>
+
+
+  </table>
+
+	<script src="/bitrix_lookup/popup.js"></script>
+
+
+</div>

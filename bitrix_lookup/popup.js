@@ -11,6 +11,7 @@ searchbar.focus()
 searchB.addEventListener('click', search)
 var myAPIKey = process.env.BITRIXTEST;
 console.log(myAPIKey)
+auth_code = auth.value
 //searches.value = 'TITLE'
 //searchbar.value = 'funeral'
 function search() {

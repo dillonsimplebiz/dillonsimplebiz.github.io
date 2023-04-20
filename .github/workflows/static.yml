@@ -41,5 +41,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        env:
+          BITRIXTEST3: ${{ secrets.BITRIXTEST3 }}
       - name: Run tests
-        run: sh setEnvironment.sh ${{ secrets.BITRIXTEST3 }}
+        run: echo $BITRIXTEST3

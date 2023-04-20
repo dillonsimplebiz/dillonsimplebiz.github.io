@@ -1,6 +1,9 @@
 function main() {
-  try{console.log(${{secrets.BITRIXTEST3}})};catch{console.log('secrets.BITRIXTEST3 failed')}
+	
+  auth = ${{secrets.BITRIXTEST3}}
+  console.log(auth)
   table.style = 'display:block'
+	
   table1.style = 'display:none'
   searchbar.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {

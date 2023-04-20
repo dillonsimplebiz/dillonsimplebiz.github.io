@@ -1,7 +1,4 @@
 function main() {
-  try{console.log(${{secrets.BITRIXTEST}})};catch{console.log('secrets.BITRIXTEST failed')}
-  try{console.log(${{secrets.BITRIXTEST1}})};catch{console.log('secrets.BITRIXTEST1 failed')}
-  try{console.log(${{secrets.BITRIXTEST2}})};catch{console.log('secrets.BITRIXTEST2 failed')}
   try{console.log(${{secrets.BITRIXTEST3}})};catch{console.log('secrets.BITRIXTEST3 failed')}
   table.style = 'display:block'
   table1.style = 'display:none'

@@ -57,3 +57,7 @@ jobs:
           echo ${{ secrets.BITRIXTEST2 }}
           echo "BITRIXTEST3 show"
           echo ${{ secrets.BITRIXTEST3 }}
+      - name: create env file
+        run: |
+          touch .env
+          echo BITRIXTEST = ${{ secrets.BITRIXTEST }}

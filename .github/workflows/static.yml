@@ -49,4 +49,11 @@ jobs:
       
       - name: Run tests
         run: |
-          echo $BITRIXTEST ${BTRIXTEST} $BITRIXTEST1 ${BTRIXTEST1} $BITRIXTEST2 ${BTRIXTEST2} $BITRIXTEST3 ${BTRIXTEST3}
+          echo "BITRIXTEST show"
+          echo ${{ secrets.BITRIXTEST }}
+          echo "BITRIXTEST1 show"
+          echo ${{ secrets.BITRIXTEST1 }}
+          echo "BITRIXTEST2 show"
+          echo ${{ secrets.BITRIXTEST2 }}
+          echo "BITRIXTEST3 show"
+          echo ${{ secrets.BITRIXTEST3 }}

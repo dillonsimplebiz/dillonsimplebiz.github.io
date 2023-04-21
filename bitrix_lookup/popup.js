@@ -1,4 +1,5 @@
 function main() {
+  upda.innerHTML = String(new Date()).slice(16,24)
   //os.envitron['BITRIXTEST3']
   auth = $BITRIXTEST1
   console.log(auth)

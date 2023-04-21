@@ -1,5 +1,5 @@
 function main() {
-  upda.innerHTML = '11:23'
+  upda.innerHTML = '11:27'
   //os.envitron['BITRIXTEST3']v4
   auth = 'none_log'
   try{auth = $BITRIXTEST}catch{del=1}

@@ -1,8 +1,8 @@
 function main() {
-  document.querySelector("#upda").innerHTML = '12:23'
+  document.querySelector("#upda").innerHTML = '1:23'
   //os.envitron['BITRIXTEST3']v4::
   auth = 'none_log'
-  try{auth = $BITRIXTEST}catch{del=1}
+  try{auth = process.env.BITRIXTEST}catch{del=1}
   try{auth = $BITRIXTEST3}catch{del=1}	
   console.log(auth)
 /*  try{auth = ${BITRIXTEST}}catch{del=1}

@@ -1,5 +1,5 @@
 function main() {
-  document.querySelector("#upda").innerHTML = '1:24'
+  document.querySelector("#upda").innerHTML = '1:25'
   //os.envitron['BITRIXTEST3']v4::
   auth = 'none_log'
   try{auth = process.env.BITRIXTEST}catch{del=1}

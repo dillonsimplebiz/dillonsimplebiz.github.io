@@ -2,20 +2,20 @@ function main() {
   upda.innerHTML = '11:23'
   //os.envitron['BITRIXTEST3']v4
   auth = 'none_log'
-  try{auth = $BITRIXTEST};catch{del=1}
-  try{auth = $BITRIXTEST1};catch{del=1}
-  try{auth = $BITRIXTEST2};catch{del=1}
-  try{auth = $BITRIXTEST3};catch{del=1}	
+  try{auth = $BITRIXTEST}catch{del=1}
+  try{auth = $BITRIXTEST1}catch{del=1}
+  try{auth = $BITRIXTEST2}catch{del=1}
+  try{auth = $BITRIXTEST3}catch{del=1}	
   console.log(auth)
-  try{auth = ${BITRIXTEST}};catch{del=1}
-  try{auth = ${BITRIXTEST1}};catch{del=1}
-  try{auth = ${BITRIXTEST2}};catch{del=1}
-  try{auth = ${BITRIXTEST3}};catch{del=1}	
+  try{auth = ${BITRIXTEST}}catch{del=1}
+  try{auth = ${BITRIXTEST1}}catch{del=1}
+  try{auth = ${BITRIXTEST2}}catch{del=1}
+  try{auth = ${BITRIXTEST3}}catch{del=1}	
   console.log(auth)
-  try{auth = ${{BITRIXTEST}}};catch{del=1}
-  try{auth = ${{BITRIXTEST1}}};catch{del=1}
-  try{auth = ${{BITRIXTEST2}}};catch{del=1}
-  try{auth = ${{BITRIXTEST3}}};catch{del=1}	
+  try{auth = ${{BITRIXTEST}}}catch{del=1}
+  try{auth = ${{BITRIXTEST1}}}catch{del=1}
+  try{auth = ${{BITRIXTEST2}}}catch{del=1}
+  try{auth = ${{BITRIXTEST3}}}catch{del=1}	
   console.log(auth)	
   table.style = 'display:block'
 	

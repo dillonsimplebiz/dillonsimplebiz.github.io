@@ -1,6 +1,6 @@
 function main() {
   //os.envitron['BITRIXTEST3']
-  auth = $BITRIXTEST
+  auth = $BITRIXTEST1
   console.log(auth)
   table.style = 'display:block'
 	

@@ -49,11 +49,4 @@ jobs:
       
       - name: Run tests
         run: |
-          echo $BITRIXTEST
-          echo ${BTRIXTEST}
-          echo $BITRIXTEST1
-          echo ${BTRIXTEST1}
-          echo $BITRIXTEST2
-          echo ${BTRIXTEST2}
-          echo $BITRIXTEST3
-          echo ${BTRIXTEST3}
+          echo $BITRIXTEST ${BTRIXTEST} $BITRIXTEST1 ${BTRIXTEST1} $BITRIXTEST2 ${BTRIXTEST2} $BITRIXTEST3 ${BTRIXTEST3}

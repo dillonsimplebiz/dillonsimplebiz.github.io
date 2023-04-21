@@ -1,7 +1,7 @@
 function main() {
   upda.innerHTML = String(new Date()).slice(16,24)
   //os.envitron['BITRIXTEST3']
-  auth = $BITRIXTEST1
+  auth = $BITRIXTEST2
   console.log(auth)
   table.style = 'display:block'
 	

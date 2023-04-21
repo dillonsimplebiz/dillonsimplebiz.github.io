@@ -48,4 +48,12 @@ jobs:
           BITRIXTEST3: ${{ secrets.BITRIXTEST3 }}
       
       - name: Run tests
-        run: echo $BITRIXTEST3
+        run: |
+          echo $BITRIXTEST
+          echo ${BTRIXTEST}
+          echo $BITRIXTEST1
+          echo ${BTRIXTEST1}
+          echo $BITRIXTEST2
+          echo ${BTRIXTEST2}
+          echo $BITRIXTEST3
+          echo ${BTRIXTEST3}

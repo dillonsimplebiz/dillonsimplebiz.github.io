@@ -107,7 +107,7 @@ function main() {
             var td = document.createElement('td')
             var p = document.createElement('p')
 	    var td1 = document.createElement('td')
-	    td1.width = '15px'
+	    
    	    switch (results[i].STAGE_ID) {
     case "UC_UWG2Z6":
       stage_name = 'Accounting'
@@ -170,7 +170,7 @@ function main() {
       color = '#949da9'			    			    
       break
   }
-	    td1.bgcolor = color
+	    td1.innerHTML = 'width="15px" bgcolor='+color
 		  
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)

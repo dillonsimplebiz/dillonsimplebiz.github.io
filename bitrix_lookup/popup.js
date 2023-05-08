@@ -106,10 +106,77 @@ function main() {
             var tr = document.createElement('tr')
             var td = document.createElement('td')
             var p = document.createElement('p')
+	    var td1 = document.createElement('td')
+	    td1.width = '15px'
+   	    switch (results[i].STAGE_ID) {
+    case "UC_UWG2Z6":
+      stage_name = 'Accounting'
+      color = '#00bdb5'
+      break
+    case "NEW":
+      stage_name = 'New Project - Check Keywords'
+      color = '#fff2cc'
+      break
+    case "PREPARATION":
+      stage_name = 'Ready to Assign'
+      color = '#fff2cc'			    
+      break
+    case "PREPAYMENT_INVOICE":
+      stage_name = 'Assigned to Developer'
+      color = '#fff2cc'			    
+      break
+    case "EXECUTING":
+      stage_name = 'Under Construction - Work Has Begun'
+      color = '#fff300'			    
+      break
+    case "UC_E7D3K7":
+      stage_name = 'Waiting on Green Screen'
+      color = '#f0009c'			    
+      break
+    case "UC_CKBLB0":
+      stage_name = 'Collaboration'
+      color = '#f99500'			    
+      break
+    case "FINAL_INVOICE":
+      stage_name = 'Review 1 - Proofreader'
+      color = '#578520'			    
+      break
+    case "UC_DNHMU6":
+      stage_name = 'Review 2 - Dev Lead'
+      color = '#abd46c'			    
+      break
+    case "1":
+      stage_name = 'Review 3 - Senior Lead'
+      color = '#0052a7'			    
+      break
+    case "2":
+      stage_name = 'Review 4 - Final Inspection & Delivery'
+      color = '#662793'			    
+      break
+    case "3":
+      stage_name = 'Delivered'
+      color = '#10e5fc'			    
+      break
+    case "UC_YNZ0TE":
+      stage_name = 'Accounting Hold'
+      color = '#ef3000'			    
+      break
+    case "UC_T514VC":
+      stage_name = 'Canceled Deal'
+      color = '#949da9'			    
+      break
+    case "LOSE":
+      stage_name = 'Closed (Moved to Blues Board)'
+      color = '#949da9'			    			    
+      break
+  }
+	    td1.bgcolor = color
+		  
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)
             p.param = i
             td.appendChild(p)
+            tr.appendChild(td1)
             tr.appendChild(td)
             table.appendChild(tr)
           }

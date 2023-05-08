@@ -170,7 +170,8 @@ function main() {
       color = '#949da9'			    			    
       break
   }
-	    td1.innerHTML = 'width="15px" bgcolor='+color
+	    td1.width="15px"
+	    td1.bgcolor=color
 		  
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)

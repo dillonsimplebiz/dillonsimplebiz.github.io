@@ -170,6 +170,7 @@ function main() {
       color = '#949da9'			    			    
       break
   }
+		  console.log(color)
 	    td1.width="15px"
 	    td1.bgcolor=color
 		  

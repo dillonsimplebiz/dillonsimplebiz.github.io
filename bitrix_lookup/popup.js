@@ -172,7 +172,7 @@ function main() {
   }
 		  console.log(color)
 	    td1.width="15px"
-	    td1.bgcolor=color
+	    td1.bgColor=color
 		  
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)

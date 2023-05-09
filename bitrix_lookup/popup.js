@@ -198,8 +198,8 @@ $.when(
               lookuptablereviews.innerHTML = data
 		var tryagainst = document.getElementById('TITLE').innerHTML
 		var trs = document.getElementsByTagName('tr')
-		document.getElementById('sjr').innerHTML == 'Loading...'
-		document.getElementById('tpr').innerHTML == 'Loading...'	
+		document.getElementById('sjr').innerHTML = 'Loading...'
+		document.getElementById('tpr').innerHTML = 'Loading...'	
 		for (var i=0;i<trs.length;i++){
 			try{
 				if (trs[i].children[3].innerHTML.trim().includes(tryagainst.trim())){

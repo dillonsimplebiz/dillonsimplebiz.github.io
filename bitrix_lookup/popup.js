@@ -1,5 +1,5 @@
 function main() {
-  document.querySelector("#upda").innerHTML = '1:52'
+  document.querySelector("#upda").innerHTML = ''
   //os.envitron['BITRIXTEST3']v4::
   auth = 'none_log'
   try{auth = process.env.BITRIXTEST}catch{del=1}
@@ -188,7 +188,42 @@ function main() {
     }
   }
 }
-
+function reviews_(){
+$.when(
+        $.ajax(
+          'https://docs.google.com/spreadsheets/d/19_5VjsLHcp9gCOZd4M7QqWJhm8lMU28j6Y15sFRzVn8/gviz/tq?tqx=out:html&tq&gid=1426942431', {
+            method: "GET",
+            success: function(data) {
+              //console.log(data); /* выведет "Текст" */
+              lookuptablereviews.innerHTML = data
+		var tryagainst = document.getElementById('TITLE').innerHTML
+		var trs = document.getElementsByTagName('tr')
+		document.getElementById('sjr').innerHTML = 'Sitejabber Review NOT Claimed'
+		document.getElementById('tpr').innerHTML = 'Trustpilot Review NOT Claimed'	
+		for (var i=0;i<trs.length;i++){
+			try{
+				if (trs[i].children[3].innerHTML.includes(tryagainst)){
+					if(trs[i].children[2].innerHTML == '5'){
+						if (trs[i].children[0].innerHTML == 'S'){
+							document.getElementById('sjr').innerHTML = 'Sitejabber Review Claimed'		
+						}
+						if (trs[i].children[0].innerHTML == 'T'){
+							document.getElementById('tpr').innerHTML = 'Trustpilot Review Claimed'	
+						}
+					}
+				}
+			}
+			catch{continue}
+		}
+            }
+          }
+        )
+      ).then(function() {
+      
+      return
+      })      
+		
+}
 function show(indexCover) {
   index = indexCover.currentTarget.param
   table.style = 'display:none'
@@ -258,6 +293,7 @@ function show(indexCover) {
   UF_CRM_1681248068566.innerHTML = results[index].UF_CRM_1681248068566
   ButtonBitrix.href = 'https://simplebiz.bitrix24.com/crm/deal/details/' + results[index].ID + '/'
   ButtonBack.addEventListener('click', main)
+  reviews()
 
 }
 main()

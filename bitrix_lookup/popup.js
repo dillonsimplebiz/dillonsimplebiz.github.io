@@ -293,7 +293,7 @@ function show(indexCover) {
   UF_CRM_1681248068566.innerHTML = results[index].UF_CRM_1681248068566
   ButtonBitrix.href = 'https://simplebiz.bitrix24.com/crm/deal/details/' + results[index].ID + '/'
   ButtonBack.addEventListener('click', main)
-  reviews()
+  reviews_()
 
 }
 main()

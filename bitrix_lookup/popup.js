@@ -202,7 +202,7 @@ $.when(
 		document.getElementById('tpr').innerHTML = 'Loading...'	
 		for (var i=0;i<trs.length;i++){
 			try{
-				if (trs[i].children[3].innerHTML.trim().includes(tryagainst.trim())){
+				if (trs[i].children[3].innerHTML.trim().includes(tryagainst.trim()) || tryagainst.trim().includes(trs[i].children[3].innerHTML.trim())){
 					if(trs[i].children[2].innerHTML == '5'){
 						if (trs[i].children[0].innerHTML == 'S'){
 							document.getElementById('sjr').innerHTML = 'Sitejabber Review Claimed'		

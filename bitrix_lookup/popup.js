@@ -118,6 +118,7 @@ function main() {
               //console.log(results1['result_total'])
               //console.log(keys)
               total_logs = []
+              origin = {}
               //console.log(results1)
               results = []
               for(var i=0;i<keys.length;i++){
@@ -132,11 +133,13 @@ function main() {
                   	if (!total_logs.includes(results1['result'][keys[i]][j].ID)){
                     	total_logs.push(results1['result'][keys[i]][j].ID)
                       results.push(results1['result'][keys[i]][j])
+                      origin[results1['result'][keys[i]][j].TITLE] = keys[i]
                     }
                   }
 
                 }
               }
+              console.log(origin)
                //console.log(total_logs)
               //console.log(results)
                //console.log('logE')
@@ -154,6 +157,8 @@ function main() {
             var td = document.createElement('td')
             var p = document.createElement('p')
             var td1 = document.createElement('td')
+            var td2 = document.createElement('td')
+            var p2 = document.createElement('p')
 
             switch (results[i].STAGE_ID) {
               case "UC_UWG2Z6":
@@ -220,6 +225,19 @@ function main() {
             //console.log(color)
             td1.width = "15px"
             td1.bgColor = color
+            switch (origin[results[i].TITLE]){
+            	case "0":
+              	p2.innerHTML = 'New Main URL'
+              case "1":
+              	p2.innerHTML = 'Legacy URL'
+              case "2":
+              	p2.innerHTML = 'Phone Number'
+              case "3":
+                p2.innerHTML = 'Owner'
+              case "4":
+                p2.innerHTML = 'Business Name'
+            }
+            
 
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)
@@ -227,6 +245,8 @@ function main() {
             td.appendChild(p)
             tr.appendChild(td1)
             tr.appendChild(td)
+            td2.appendChild(p2)
+            tr.appendChild(td2)
             table.appendChild(tr)
           }
           displayed.innerHTML = 'Results: ' + String(results.length)

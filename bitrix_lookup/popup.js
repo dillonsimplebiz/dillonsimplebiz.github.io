@@ -254,8 +254,8 @@ function main() {
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)
             p.param = i
-            td2.width='93px'
-            td.width='256px'
+            td2.width='106px'
+            td.width='238px'
             td.appendChild(p)
             tr.appendChild(td1)
             tr.appendChild(td)

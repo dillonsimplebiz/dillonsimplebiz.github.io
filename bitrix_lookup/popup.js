@@ -57,13 +57,17 @@ function main() {
       //var baseURL = "https://simplebiz.bitrix24.com/rest/168/" + atob(a) + "/crm.deal.list.json?SELECT[]=TITLE&SELECT[]=STAGE_ID&SELECT[]=UF_CRM_1647620775586&SELECT[]=UF_CRM_1647620757299&SELECT[]=UF_CRM_1647619374742&SELECT[]=UF_CRM_1647620698387&SELECT[]=UF_CRM_1647620715972&SELECT[]=UF_CRM_1681248068566&SELECT[]=UF_CRM_1647653820587&SELECT[]=UF_CRM_1647616629267&SELECT[]=UF_CRM_1680303047490&SELECT[]=UF_CRM_1680303451526&SELECT[]=UF_CRM_1680294914005"
       
       selects="SELECT[]=TITLE&SELECT[]=STAGE_ID&SELECT[]=UF_CRM_1647620775586&SELECT[]=UF_CRM_1647620757299&SELECT[]=UF_CRM_1647619374742&SELECT[]=UF_CRM_1647620698387&SELECT[]=UF_CRM_1647620715972&SELECT[]=UF_CRM_1681248068566&SELECT[]=UF_CRM_1647653820587&SELECT[]=UF_CRM_1647616629267&SELECT[]=UF_CRM_1680303047490&SELECT[]=UF_CRM_1680303451526&SELECT[]=UF_CRM_1680294914005".replaceAll("&","%26")
-			//URL's
+      //business name
       try{
-				cmd0 = selects+"%26filter[%UF_CRM_1647620775586]=" + searched.match(/(((?<=https\:\/\/www\.)|(?<=http\:\/\/www\.)|(?<=www\.)|(?<=https\:\/\/(?!www))|(?<=http\:\/\/(?!www))).*(?<!\/))|^(?!(http|www))(.*(?<!\/))/)[0]
-      }catch{cmd0=''}
+      	cmd0 = selects+'%26filter[%TITLE]='+searched
+      }catch{cmd0=''}			
+      //URL's
       try{
-      	cmd1 = selects+"%26filter[%UF_CRM_1647620757299]=" + searched.match(/(((?<=https\:\/\/www\.)|(?<=http\:\/\/www\.)|(?<=www\.)|(?<=https\:\/\/(?!www))|(?<=http\:\/\/(?!www))).*(?<!\/))|^(?!(http|www))(.*(?<!\/))/)[0]
+				cmd1 = selects+"%26filter[%UF_CRM_1647620775586]=" + searched.match(/(((?<=https\:\/\/www\.)|(?<=http\:\/\/www\.)|(?<=www\.)|(?<=https\:\/\/(?!www))|(?<=http\:\/\/(?!www))).*(?<!\/))|^(?!(http|www))(.*(?<!\/))/)[0]
       }catch{cmd1=''}
+      try{
+      	cmd2 = selects+"%26filter[%UF_CRM_1647620757299]=" + searched.match(/(((?<=https\:\/\/www\.)|(?<=http\:\/\/www\.)|(?<=www\.)|(?<=https\:\/\/(?!www))|(?<=http\:\/\/(?!www))).*(?<!\/))|^(?!(http|www))(.*(?<!\/))/)[0]
+      }catch{cmd2=''}
       //phone number
       try{
         rawNumber = searched.match(/\(?[0-9]{3}(\.|\-|\)|\ )*?[0-9]{3}(\.|\-|\)|\ )*?[0-9]{4}/)[0].match(/[0-9]/g)
@@ -83,16 +87,13 @@ function main() {
         baseURL += "&filter[%" + selection + "][7]=" + rawNumberArr[0] + " " + rawNumberArr[1] + ' ' + rawNumberArr[2]
         baseURL += "&filter[%" + selection + "][8]=" + rawNumberArr[0] + "-" + rawNumberArr[1] + '-' + rawNumberArr[2]
         baseURL += "&filter[%" + selection + "][9]=" + rawNumberArr[0] + rawNumberArr[1] + rawNumberArr[2]
-        cmd2 = selects+baseURL.replaceAll('&',"%26")
-      }catch{cmd2=''}
+        cmd3 = selects+baseURL.replaceAll('&',"%26")
+      }catch{cmd3=''}
       //owner
       try{
-      	cmd3 = selects+'%26filter[%UF_CRM_1647619374742]='+searched
-      }catch{cmd3=''}
-      //business name
-      try{
-      	cmd4 = selects+'%26filter[%TITLE]='+searched
+      	cmd4 = selects+'%26filter[%UF_CRM_1647619374742]='+searched
       }catch{cmd4=''}
+
       //console.log(cmd0)
       
       url = ''
@@ -226,23 +227,29 @@ function main() {
             td1.width = "15px"
             td1.bgColor = color
             switch (origin[results[i].TITLE]){
-            	case "0":
-              	p2.innerHTML = 'New Main URL'
-              case "1":
-              	p2.innerHTML = 'Legacy URL'
-              case "2":
-              	p2.innerHTML = 'Phone Number'
-              case "3":
-                p2.innerHTML = 'Owner'
-              case "4":
+              case "0":
                 p2.innerHTML = 'Business Name'
+                break            
+            	case "1":
+              	p2.innerHTML = 'New Main URL'
+                break
+              case "2":
+              	p2.innerHTML = 'Legacy URL'
+                break
+              case "3":
+              	p2.innerHTML = 'Phone Number'
+                break
+              case "4":
+                p2.innerHTML = 'Owner'
+                break
+
             }
-            
 
             p.innerHTML = results[i].TITLE
             p.addEventListener("click", show, false)
             p.param = i
             td2.width='93px'
+            td.width='256px'
             td.appendChild(p)
             tr.appendChild(td1)
             tr.appendChild(td)

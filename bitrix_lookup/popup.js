@@ -93,6 +93,9 @@ function main() {
       try{
       	cmd4 = selects+'%26filter[%UF_CRM_1647619374742]='+searched
       }catch{cmd4=''}
+			try{
+      	cmd5 = selects+'%26filter[%UF_CRM_1647620715972]='+searched
+      }catch{cmd5=''}
 
       //console.log(cmd0)
       
@@ -103,6 +106,7 @@ function main() {
       if(cmd2!=''){url+='&cmd[2]=crm.deal.list?'+cmd2}
       if(cmd3!=''){url+='&cmd[3]=crm.deal.list?'+cmd3}
       if(cmd4!=''){url+='&cmd[4]=crm.deal.list?'+cmd4}
+      if(cmd5!=''){url+='&cmd[5]=crm.deal.list?'+cmd4}
       
       console.log(url)
       $.when(
@@ -242,6 +246,8 @@ function main() {
               case "4":
                 p2.innerHTML = 'Owner'
                 break
+              case "5": 
+              	p2.innerHTML = 'Email'
 
             }
 

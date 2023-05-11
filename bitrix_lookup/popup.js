@@ -56,7 +56,7 @@ function main() {
       err.innerHTML = ''
       //var baseURL = "https://simplebiz.bitrix24.com/rest/168/" + atob(a) + "/crm.deal.list.json?SELECT[]=TITLE&SELECT[]=STAGE_ID&SELECT[]=UF_CRM_1647620775586&SELECT[]=UF_CRM_1647620757299&SELECT[]=UF_CRM_1647619374742&SELECT[]=UF_CRM_1647620698387&SELECT[]=UF_CRM_1647620715972&SELECT[]=UF_CRM_1681248068566&SELECT[]=UF_CRM_1647653820587&SELECT[]=UF_CRM_1647616629267&SELECT[]=UF_CRM_1680303047490&SELECT[]=UF_CRM_1680303451526&SELECT[]=UF_CRM_1680294914005"
       
-      selects="SELECT[]=TITLE&SELECT[]=STAGE_ID&SELECT[]=UF_CRM_1647620775586&SELECT[]=UF_CRM_1647620757299&SELECT[]=UF_CRM_1647619374742&SELECT[]=UF_CRM_1647620698387&SELECT[]=UF_CRM_1647620715972&SELECT[]=UF_CRM_1681248068566&SELECT[]=UF_CRM_1647653820587&SELECT[]=UF_CRM_1647616629267&SELECT[]=UF_CRM_1680303047490&SELECT[]=UF_CRM_1680303451526&SELECT[]=UF_CRM_1680294914005".replaceAll("&","%26")
+      selects="SELECT[]=TITLE&SELECT[]=STAGE_ID&SELECT[]=UF_CRM_1647620775586&SELECT[]=UF_CRM_1647620757299&SELECT[]=UF_CRM_1647619374742&SELECT[]=UF_CRM_1647620698387&SELECT[]=UF_CRM_1647620715972&SELECT[]=UF_CRM_1681248068566&SELECT[]=UF_CRM_1647653820587&SELECT[]=UF_CRM_1647616629267&SELECT[]=UF_CRM_1680303047490&SELECT[]=UF_CRM_1680303451526&SELECT[]=UF_CRM_1680294914005&SELECT[]=UF_CRM_1647620873417".replaceAll("&","%26")
       //business name
       try{
       	cmd0 = selects+'%26filter[%TITLE]='+searched
@@ -93,20 +93,26 @@ function main() {
       try{
       	cmd4 = selects+'%26filter[%UF_CRM_1647619374742]='+searched
       }catch{cmd4=''}
-			try{
+      //email
+      try{
       	cmd5 = selects+'%26filter[%UF_CRM_1647620715972]='+searched
       }catch{cmd5=''}
+      try{
+      	cmd6 = selects+'%26filter[%UF_CRM_1647620873417]='+searched
+      }catch{cmd6=''}
+      
 
       //console.log(cmd0)
       
       url = ''
       url = "https://simplebiz.bitrix24.com/rest/168/" + atob(a) + "/batch.json?halt=0"
       if(cmd0!=''){url+='&cmd[0]=crm.deal.list?'+cmd0}
-			if(cmd1!=''){url+='&cmd[1]=crm.deal.list?'+cmd1}
+      if(cmd1!=''){url+='&cmd[1]=crm.deal.list?'+cmd1}
       if(cmd2!=''){url+='&cmd[2]=crm.deal.list?'+cmd2}
       if(cmd3!=''){url+='&cmd[3]=crm.deal.list?'+cmd3}
       if(cmd4!=''){url+='&cmd[4]=crm.deal.list?'+cmd4}
-      if(cmd5!=''){url+='&cmd[5]=crm.deal.list?'+cmd4}
+      if(cmd5!=''){url+='&cmd[5]=crm.deal.list?'+cmd5}
+      if(cmd6!=''){url+='&cmd[6]=crm.deal.list?'+cmd6}
       
       console.log(url)
       $.when(
@@ -234,7 +240,7 @@ function main() {
               case "0":
                 p2.innerHTML = 'Business Name'
                 break            
-            	case "1":
+              case "1":
               	p2.innerHTML = 'New Main URL'
                 break
               case "2":
@@ -248,6 +254,10 @@ function main() {
                 break
               case "5": 
               	p2.innerHTML = 'Email'
+                break
+              case "6": 
+              	p2.innerHTML = 'Notes'
+                break
 
             }
 

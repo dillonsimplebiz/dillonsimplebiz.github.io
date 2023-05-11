@@ -269,6 +269,20 @@ function main() {
     }
   }
 
+function copyLocal(){
+	console.log('try')
+  rawNumber = document.getElementById('UF_CRM_1647653820587').innerHTML.match(/\(?[0-9]{3}(\.|\-|\)|\ )*?[0-9]{3}(\.|\-|\)|\ )*?[0-9]{4}/)[0].match(/[0-9]/g)
+  console.log(rawNumber.join(''))
+    navigator.clipboard
+    	.writeText(rawNumber.join(''))
+      .then(function() {
+   				console.log('te')
+  		})
+      .catch(function() {
+    /* clipboard write failed */
+    			console.log('er')
+      })
+}
 
 function reviews_() {
   $.when(
@@ -388,6 +402,7 @@ function show(indexCover) {
   reviews_()
 
 }
+copyT.addEventListener('click',copyLocal)
 searchbar.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
     searchB.click()

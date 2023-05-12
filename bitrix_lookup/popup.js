@@ -278,7 +278,45 @@ function main() {
       })
     }
   }
+function monthly(){
+	if (UF_CRM_1680303047490.innerHTML == ''){UF_CRM_1680303047490.innerHTML = 'Loading...'}
+  if (UF_CRM_1680303451526.innerHTML == ''){UF_CRM_1680303451526.innerHTML = 'Loading...'}
+  $.when(
+    $.ajax(
+      'https://docs.google.com/spreadsheets/d/10rYcjEsN992Qb2Yvkij81C6gAwSC77XSzAlE38t59Qc/gviz/tq?tqx=out:html&tq&gid=599787087', {
+        method: "GET",
+        success: function(data) {
+          //console.log(data); /* выведет "Текст" */
+          lookuptablebilling.innerHTML = data
+          var tryagainst = document.getElementById('TITLE').innerHTML
+          var trs = document.getElementsByTagName('tr')
+					
+          for (var i = 0; i < trs.length; i++) {
+            try {
+              if (trs[i].children[5].innerHTML.trim().includes(tryagainst.trim()) || tryagainst.trim().includes(trs[i].children[5].innerHTML.trim())) {
+              	UF_CRM_1680303047490.innerHTML = trs[i].children[6].innerHTML
+                UF_CRM_1680303451526.innerHTML = trs[i].children[7].innerHTML
+              }
+            } catch {
+              continue
+            }
+          }
+          if (UF_CRM_1680303047490.innerHTML == 'Loading...') {
+            UF_CRM_1680303047490.innerHTML = 'Data not found'
+          }
+          if (UF_CRM_1680303451526.innerHTML == 'Loading...') {
+            UF_CRM_1680303451526.innerHTML = 'Data not found'
+          }
 
+        }
+      }
+    )
+  ).then(function() {
+
+    return
+  })
+
+}
 
 function reviews_() {
   $.when(
@@ -396,6 +434,9 @@ function show(indexCover) {
   ButtonBitrix.href = 'https://simplebiz.bitrix24.com/crm/deal/details/' + results[index].ID + '/'
   ButtonBack.addEventListener('click', main)
   reviews_()
+  if (UF_CRM_1680303047490.innerHTML == '' || UF_CRM_1680303451526.innerHTML == ''){
+  	monthly()
+  }
 
 }
 searchbar.addEventListener('keypress', function(e) {

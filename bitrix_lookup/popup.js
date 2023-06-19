@@ -335,11 +335,9 @@ function reviews_() {
               if (trs[i].children[3].innerHTML.trim().includes(tryagainst.trim()) || tryagainst.trim().includes(trs[i].children[3].innerHTML.trim())) {
                 if (trs[i].children[2].innerHTML == '5') {
                   if (trs[i].children[0].innerHTML == 'S') {
-                    document.getElementById('sjr').innerHTML = 'Sitejabber Review Claimed'
                     sjc+=1
                   }
                   if (trs[i].children[0].innerHTML == 'T') {
-                    document.getElementById('tpr').innerHTML = 'Trustpilot Review Claimed'
                     tpc+=1
                   }
                 }

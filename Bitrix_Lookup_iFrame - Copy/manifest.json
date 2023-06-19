@@ -1,0 +1,11 @@
+{
+  "name": "SimpleBiz Bitrix Client Lookup",
+  "description": "Extension to find all Simple.Biz clients and display all the information in one spot. (faster and more reliable than Bitrix itself)",
+  "version": "1.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "training.bitrix24.com.png"
+  }
+
+}

@@ -328,16 +328,19 @@ function reviews_() {
           lookuptablereviews.innerHTML = data
           var tryagainst = document.getElementById('TITLE').innerHTML
           var trs = document.getElementsByTagName('tr')
-
+					var sjc = 0
+          var tpc = 0
           for (var i = 0; i < trs.length; i++) {
             try {
               if (trs[i].children[3].innerHTML.trim().includes(tryagainst.trim()) || tryagainst.trim().includes(trs[i].children[3].innerHTML.trim())) {
                 if (trs[i].children[2].innerHTML == '5') {
                   if (trs[i].children[0].innerHTML == 'S') {
                     document.getElementById('sjr').innerHTML = 'Sitejabber Review Claimed'
+                    sjc+=1
                   }
                   if (trs[i].children[0].innerHTML == 'T') {
                     document.getElementById('tpr').innerHTML = 'Trustpilot Review Claimed'
+                    tpc+=1
                   }
                 }
               }
@@ -346,10 +349,20 @@ function reviews_() {
             }
           }
           if (document.getElementById('sjr').innerHTML == 'Loading...') {
-            document.getElementById('sjr').innerHTML = 'Sitejabber Review NOT Claimed'
+          	if (sjc > 0){
+            	document.getElementById('sjr').innerHTML = 'Sitejabber Reviews: '+sjc
+            }
+            else{
+            	document.getElementById('sjr').innerHTML = 'Sitejabber Reviews: 0'
+            }
           }
           if (document.getElementById('tpr').innerHTML == 'Loading...') {
-            document.getElementById('tpr').innerHTML = 'Trustpilot Review NOT Claimed'
+            if (tpc > 0){
+            	document.getElementById('tpr').innerHTML = 'Trustpilot Reviews: '+tpc
+            }
+            else{
+            	document.getElementById('tpr').innerHTML = 'Trustpilot Reviews: 0'
+            }
           }
 
         }

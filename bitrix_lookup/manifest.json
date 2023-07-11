@@ -1,5 +1,5 @@
 {
-  "name": "SimpleBiz Email Region Lookup",
+  "name": "SimpleBiz bitrix Region Lookup",
   "description": "Test Extension to lookup regions based on email.",
   "version": "1.0",
   "manifest_version": 3,
